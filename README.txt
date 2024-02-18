@@ -1,0 +1,1 @@
+- 15/01/24 : "mqtt_loader_compr_CAN_v1-1-6.py", version final et testé

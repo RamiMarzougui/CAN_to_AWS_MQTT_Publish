@@ -1,0 +1,99 @@
+import time
+
+# Compteur de temps 100ms
+def timer_100ms():
+    global start_tempo_100ms
+    global absolute_s_100ms
+    global debug_history
+    # RAZ flag
+    res_100ms_flag = False
+    # get current time ms 
+    current_time_ms = time.time()*1000 #*1000 pour mettre en ms
+    # get abosulte current seconde
+    current_absolute_s = int(current_time_ms/1000)#garde que la partie s (ex : 2.8s -> 2s)
+    # for the first shot
+    if start_tempo_100ms == 0:
+        start_tempo_100ms = current_time_ms
+        absolute_s_100ms = current_absolute_s
+    
+    debug_history.append(str(current_absolute_s) + " : " + str(absolute_s_100ms) + " : " + str(current_absolute_s - absolute_s_100ms))
+
+    #Test si nouvelles seconde, bloque la généraion d'unautre paquet
+    if current_absolute_s - absolute_s_100ms >=1:
+        res_100ms_flag = True
+        absolute_s_100ms = current_absolute_s
+        debug_history.append("detected")
+        return res_100ms_flag
+
+    # Test si overflow
+    if (current_time_ms-start_tempo_100ms) >=99:
+        res_100ms_flag = True
+    
+    
+    
+    return res_100ms_flag
+
+def concat_and_send_100ms(can_msg):
+    global msg_concatened_100ms
+    global msg_mqtt_history
+    global concatened_msg_history
+    global start_tempo_100ms
+    global cpt_rank
+    global debug_prev
+    time_as_elapsed = timer_100ms()
+    # seconde à laquelle doivent correspondre toutes les trames d'un paquet
+    #seconde_indicator = 0 
+    # Append à la liste 100ms
+    if time_as_elapsed and msg_concatened_100ms != []: #Timeout détecté
+        #debug_history.append(len (msg_concatened_100ms))
+        debug_prev = msg_concatened_100ms[0]['time'] # debug
+        #debug_history.append(msg_concatened_100ms)
+        # Ajout rank pour le debug only
+        for el in msg_concatened_100ms:
+            el["rank"] = cpt_rank
+        cpt_rank += 1
+        # Compresse trame par trame
+        # for i,msg in enumerate(msg_concatened_100ms):
+        #     # Compression
+        #     compress_can_msg(msg_concatened_100ms[i])
+        # # debu gonly
+        # # Conversion
+        # msg_mqtt = convert_to_mqtt(msg_concatened_100ms)
+        # # Envoi MQTT
+        # mqtt_connection.publish(topic=TOPIC, payload= msg_mqtt, qos=mqtt.QoS.AT_LEAST_ONCE)
+        # # Ajout historique (DEBUG)
+        # msg_mqtt_history.append(str(msg_mqtt))
+        # concatened_msg_history.append(msg_concatened_100ms)
+        # # RAZ trame concaténée
+        # msg_concatened_100ms = []
+        # #Ajout trame a concat
+        # msg_concatened_100ms.append(can_msg)
+        # Maj Start tempo uniquement si la maj a été déctecté
+        start_tempo_100ms = time.time()*1000
+
+    else: #pas de timeout
+        # Flag pour savoir si un ID a déjà était ajouté aux trames concats
+        id_already_exist = False
+        #if debug_prev != 0 and debug_prev > can_msg["time"]:
+        #    print("debug")
+        #debug_history.append(can_msg["time"])
+        # maj seconde indicator
+        # Check si trame existe déja
+        for i,msg in enumerate(msg_concatened_100ms):
+            # Si l'id est déjà ajouté alors on maj les données associés
+            if  can_msg["id"] == msg["id"]:
+                # Si existe, maj trame avec la nouvelle
+                msg_concatened_100ms[i] = can_msg
+                # Maj Flag
+                id_already_exist = True
+                break
+        if id_already_exist == False:
+            #Ajout trame a concat
+            msg_concatened_100ms.append(can_msg)
+        pass
+    pass
+
+msg = {
+    
+}
+concat_and_send_100ms(msg)

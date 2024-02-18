@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PCANExplorerProject Version="6.0" AppVersion="6.6.1" Name="trame_test">
+    <Connections AutoReset="0" IgnoreRTRLength="0" ProcessRTR="1">
+        <Connection Name="Connection1" Bus="1" Enabled="1" Protocol="0" BitRate="20" Connection="CAN_USB@pcan_usb"/>
+    </Connections>
+    <TransmitList SortColumn="3">
+        <TransmitListItem Bus="1" Msg="ID=1365,Type=D,Length=8,Data=65814841" CycleTime="10000" IsPaused="1" Creator="User"/>
+    </TransmitList>
+    <Files>
+        <File RelativePath="load_20_pct_dlc_1min.trc" BufferType="3" BufferSize="100000" TimestampFormat="1" CanIdFormat="0" LengthFormat="0" DataFormat="0"/>
+        <File RelativePath="test\trc_file_v3.trc" BufferType="3" BufferSize="100000" TimestampFormat="1" CanIdFormat="0" LengthFormat="0" DataFormat="0"/>
+        <File RelativePath="Test_20-11-23.trc" BufferType="3" BufferSize="100000" TimestampFormat="1" CanIdFormat="0" LengthFormat="0" DataFormat="0"/>
+        <File RelativePath="Test_20-11-23_10000tx.trc" BufferType="3" BufferSize="100000" TimestampFormat="1" CanIdFormat="0" LengthFormat="0" DataFormat="0"/>
+        <File RelativePath="22-11-23_10000tx.trc" BufferType="3" BufferSize="100000" TimestampFormat="1" CanIdFormat="1" LengthFormat="0" DataFormat="1"/>
+        <File RelativePath="..\..\..\30_Test_VCU\Test_02-01-24\_temp\sinus_100ms.trc"/>
+    </Files>
+</PCANExplorerProject>

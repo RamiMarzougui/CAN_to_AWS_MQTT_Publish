@@ -1,0 +1,1943 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: SC PT BMS INVCON0 VCU INVCON1 INVCON2 INVCON3 INVCON4 INVCON5 NLG6 Control Labview VCU
+
+
+VAL_TABLE_ HVILState 15 "SNA" 1 "HVIL ERROR" 0 "HVIL OK" ;
+VAL_TABLE_ isolationErrorTable 15 "SNA" 2 "ISOLATION ERROR" 1 "ISOLATION WARNING" 0 "ISOLATION OK" ;
+VAL_TABLE_ uint4_t 15 "SNA" ;
+VAL_TABLE_ rangeRequest 15 "RANGE_INVALID" 14 "RANGE_MAXIMUM" 13 "RANGE_MODESOH8" 12 "RANGE_MODESOH7" 11 "RANGE_MODESOH6" 10 "RANGE_MODESOH5" 9 "RANGE_MODESOH4" 8 "RANGE_MODESOH3" 7 "RANGE_MODESOH2" 6 "RANGE_MODESOH1" 5 "RANGE_MODE407" 4 "RANGE_MODE405" 3 "RANGE_MODE4175" 2 "RANGE_MODE415" 1 "RANGE_LIMITED" 0 "RANGE_SHIPPING" ;
+VAL_TABLE_ uint32_t -1 "SNA" ;
+VAL_TABLE_ ChargeManagerChargeStateEnum 15 "CHARGESTATE_INVALID" 1 "CHARGESTATE_COMPLETE" 0 "CHARGESTATE_NOTCOMPLETE" ;
+VAL_TABLE_ ChargeManagerConnectionStateEnum 3 "CHARGEMANAGER_FULL_CONNECTION_DC" 2 "CHARGEMANAGER_FULL_CONNECTION_AC" 1 "CHARGEMANAGER_PARTIAL_CONNECTION" 0 "CHARGEMANAGER_NO_CONNECTION" ;
+VAL_TABLE_ StringStateManagerPrechargeState 15 "STRING_NOT_EXISTING" 5 "STRING_WILL_OPEN_SOON" 4 "STRING_ON" 3 "STRING_PAUSED" 2 "STRING_CLOSING" 1 "STRING_INDEFINED" 0 "STRING_OFF" ;
+VAL_TABLE_ enumeration 32 "32" 31 "31" 30 "30" 29 "29" 28 "28" 27 "27" 26 "26" 25 "25" 24 "24" 23 "23" 22 "22" 21 "21" 20 "20" 19 "19" 18 "18" 17 "17" 16 "16" 15 "15" 14 "14" 13 "13" 12 "12" 11 "11" 10 "10" 9 "09" 8 "08" 7 "07" 6 "06" 5 "05" 4 "04" 3 "03" 2 "02" 1 "01" 0 "00" ;
+VAL_TABLE_ itemState 2 "ITEM_EMERGENCY" 1 "ITEM_OFF" 0 "ITEM_ON" ;
+VAL_TABLE_ safeState 1 "SAFESTATE_UNSAFE" 0 "SAFESTATE_SAFE" ;
+VAL_TABLE_ isolationTestState 2 "ISOLATION_TEST_NEG" 1 "ISOLATION_TEST_POS" 0 "ISOLATION_OFF" ;
+VAL_TABLE_ prechargeState 8 "CTR_PRCHG_FAILED" 7 "CTR_PRCHG_COMPLETE" 6 "CTR_PRCHG_CLOSE_POS" 5 "CTR_PRCHG_MONITOR_VOLTAGE" 4 "CTR_PRCHG_CLOSE_NEG" 3 "CTR_PRCHG_NEG_WELD_CHECK" 2 "CTR_PRCHG_CLOSE_RELAY" 1 "CTR_PRCHG_WELD_CHECK" 0 "CTR_PRCHG_OFF" ;
+VAL_TABLE_ contactorState 4 "CTR_INVALID" 3 "CTR_STRING_OPENING" 2 "CTR_STRING_ON" 1 "CTR_STRING_PRECHARGE" 0 "CTR_STRING_OFF" ;
+VAL_TABLE_ multiplexer301_VT 3 "CH3_GND" 2 "CH2_HALL_SENSE" 1 "CH1_HALL_5VSUPPLY" 0 "CH0_2V877_REF" ;
+VAL_TABLE_ clockRequestCommand 255 "CLOCK_NOCOMMAND" 1 "CLOCK_LOW" 0 "CLOCK_HIGH" ;
+VAL_TABLE_ sleepRequestCommand 255 "SLEEP_NOCOMMAND" 1 "SLEEP_ON" 0 "SLEEP_OFF" ;
+VAL_TABLE_ uint8_tCommand 255 "NOCOMMAND" ;
+VAL_TABLE_ uint24_tCommand 16777215 "NOCOMMAND" ;
+VAL_TABLE_ contactorRequestCommand 255 "CONTACTOR_NOCONTROL" 1 "CONTACTOR_ON" 0 "CONTACTOR_OFF" ;
+VAL_TABLE_ chargeState 3 "CHARGESTATE_INVALID" 1 "CHARGESTATE_COMPLETE" 0 "CHARGESTATE_NOTCOMPLETE" ;
+VAL_TABLE_ VEH_stateRequest 2 "STATE_DRIVE" 15 "STATE_INVALID" 1 "STATE_DRIVE" 0 "STATE_STANDBY" ;
+VAL_TABLE_ DEMStatus 3 "DEM_INVALID" 2 "DEM_FAILED" 1 "DEM_PASSED" 0 "DEM_NOTTESTED" ;
+VAL_TABLE_ sleepRequest 15 "SLEEP_INVALID" 1 "SLEEP_ACTIVE" 0 "SLEEP_INACTIVE" ;
+VAL_TABLE_ isolationRequest 15 "ISOLATION_INVALID" 1 "ISOLATION_ACTIVE" 0 "ISOLATION_INACTIVE" ;
+VAL_TABLE_ state 15 "STATE_INVALID" 6 "STATE_SYSTEM_FAULT" 5 "STATE_STRING_FAULT" 4 "STATE_LIMPHOME" 3 "STATE_ACCESSORY" 2 "STATE_CHARGE" 1 "STATE_DRIVE" 0 "STATE_STANDBY" ;
+VAL_TABLE_ uint8_t 255 "SNA" ;
+VAL_TABLE_ uint16_t 65535 "SNA" ;
+VAL_TABLE_ emergencyState 1 "EMERGENCY_STATE_ACTIVE" 15 "EMERGENCY_STATE_INVALID" 0 "EMERGENCY_STATE_INACTIVE" ;
+VAL_TABLE_ SNA_uint12 4095 "SNA" ;
+VAL_TABLE_ SNA_uint8 255 "SNA" ;
+VAL_TABLE_ SNA_uint16 65535 "SNA" ;
+
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ EmergencyShutoffRequest5 : 22|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdc5 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdc5 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_408 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_408 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ bDernOvrIdc5 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrIdc5 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp5 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDiagReq5 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMin5 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMax5 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDstActv5 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bReadyHV5 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV1_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV1_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV1_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV1_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV5_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV5_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV5_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV5_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ CurrentHV3 : 32|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ OutputTorque3 : 43|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ State3 : 12|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ Speed3 : 16|16@1+ (1,-32767) [-32767|32766] "1/min"  VCU
+ SG_ Checksum_208 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_208 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ CurrentHV5 : 32|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ OutputTorque5 : 43|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ State5 : 12|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ Speed5 : 16|16@1+ (1,-32767) [-32767|32766] "1/min"  VCU
+ SG_ Checksum_20C : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_20C : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ dataInvrNr5 : 53|3@1+ (1,0) [0|5] ""  VCU
+ SG_ MaxTorque5 : 12|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ MinTorque5 : 23|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ Checksum_218 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_218 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ TrqCurrWoDstC5 : 34|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ TempCurrCool5 : 45|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Mode5 : 33|3@1+ (1,0) [0|7] "-"  VCU
+ SG_ CurrentLV5 : 22|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ VoltageLV5 : 55|9@1+ (0.125,0) [0|63.875] "V"  VCU
+ SG_ DcCurrentHV5 : 36|11@1+ (0.0625,-64) [-64|63.9375] "A"  VCU
+ SG_ VoltageHV5 : 12|10@1+ (1,0) [0|1023] "V"  VCU
+ SG_ TempCurr5 : 47|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_228 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_228 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ ElectricMachineTemperature5 : 16|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ InverterTemperature5 : 24|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ UT30Curr5 : 32|6@1+ (0.5,0) [0|31.5] "V"  VCU
+ SG_ TempCurrRotor5 : 38|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_628 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_628 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ DC_MaxCurrentLV5 : 35|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ DC_MaxCurrentHV5 : 24|8@1+ (0.25,0) [0|63.75] "A"  VCU
+ SG_ bDernUndrUdcLV5 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrShtOff5 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcLv5 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcHV5 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcLv5 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdcHV5 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrLimitedPerformance5 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp_DCDC5 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcHV5 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bErrVltg5 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_419 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_419 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ EmergencyShutoffRequest4 : 22|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdc4 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdc4 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_406 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_406 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ bDernOvrIdc4 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrIdc4 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp4 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDiagReq4 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMin4 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMax4 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDstActv4 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bReadyHV4 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ DC_MaxCurrentLV4 : 35|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ DC_MaxCurrentHV4 : 24|8@1+ (0.25,0) [0|63.75] "A"  VCU
+ SG_ bDernUndrUdcLV4 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrShtOff4 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcLv4 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcHV4 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcLv4 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdcHV4 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrLimitedPerformance4 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp_DCDC4 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcHV4 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bErrVltg4 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_417 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_417 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ ElectricMachineTemperature4 : 16|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ InverterTemperature4 : 24|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ UT30Curr4 : 32|6@1+ (0.5,0) [0|31.5] "V"  VCU
+ SG_ TempCurrRotor4 : 38|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_626 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_626 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ Mode4 : 33|3@1+ (1,0) [0|7] "-"  VCU
+ SG_ CurrentLV4 : 22|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ VoltageLV4 : 55|9@1+ (0.125,0) [0|63.875] "V"  VCU
+ SG_ DcCurrentHV4 : 36|11@1+ (0.0625,-64) [-64|63.9375] "A"  VCU
+ SG_ VoltageHV4 : 12|10@1+ (1,0) [0|1023] "V"  VCU
+ SG_ TempCurr4 : 47|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_226 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_226 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ dataInvrNr4 : 53|3@1+ (1,0) [0|5] ""  VCU
+ SG_ MaxTorque4 : 12|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ MinTorque4 : 23|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ Checksum_216 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_216 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ TrqCurrWoDstC4 : 34|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ TempCurrCool4 : 45|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ CurrentHV4 : 32|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ OutputTorque4 : 43|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ State4 : 12|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ Speed4 : 16|16@1+ (1,-32767) [-32767|32766] "1/min"  VCU
+ SG_ Checksum_20A : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_20A : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ dataInvrNr3 : 53|3@1+ (1,0) [0|5] ""  VCU
+ SG_ MaxTorque3 : 12|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ MinTorque3 : 23|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ Checksum_214 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_214 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ TrqCurrWoDstC3 : 34|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ TempCurrCool3 : 45|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Mode3 : 33|3@1+ (1,0) [0|7] "-"  VCU
+ SG_ CurrentLV3 : 22|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ VoltageLV3 : 55|9@1+ (0.125,0) [0|63.875] "V"  VCU
+ SG_ DcCurrentHV3 : 36|11@1+ (0.0625,-64) [-64|63.9375] "A"  VCU
+ SG_ VoltageHV3 : 12|10@1+ (1,0) [0|1023] "V"  VCU
+ SG_ TempCurr3 : 47|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_224 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_224 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ ElectricMachineTemperature3 : 16|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ InverterTemperature3 : 24|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ UT30Curr3 : 32|6@1+ (0.5,0) [0|31.5] "V"  VCU
+ SG_ TempCurrRotor3 : 38|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_624 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_624 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ DC_MaxCurrentLV3 : 35|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ DC_MaxCurrentHV3 : 24|8@1+ (0.25,0) [0|63.75] "A"  VCU
+ SG_ bDernUndrUdcLV3 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrShtOff3 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcLv3 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcHV3 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcLv3 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdcHV3 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrLimitedPerformance3 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp_DCDC3 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcHV3 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bErrVltg3 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_415 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_415 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ EmergencyShutoffRequest3 : 22|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdc3 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdc3 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_404 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_404 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ bDernOvrIdc3 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrIdc3 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp3 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDiagReq3 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMin3 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMax3 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDstActv3 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bReadyHV3 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ EmergencyShutoffRequest1 : 22|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdc1 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdc1 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_400 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_400 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ bDernOvrIdc1 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrIdc1 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp1 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDiagReq1 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMin1 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTrqMax1 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDstActv1 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bReadyHV1 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ DC_MaxCurrentLV1 : 35|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ DC_MaxCurrentHV1 : 24|8@1+ (0.25,0) [0|63.75] "A"  VCU
+ SG_ bDernUndrUdcLV1 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrShtOff1 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcLv1 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrIdcHV1 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcLv1 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernUndrUdcHV1 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ ErrLimitedPerformance1 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernTemp_DCDC1 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bDernOvrUdcHV1 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ bErrVltg1 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ Checksum_411 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_411 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ ElectricMachineTemperature1 : 16|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ InverterTemperature1 : 24|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ UT30Curr1 : 32|6@1+ (0.5,0) [0|31.5] "V"  VCU
+ SG_ TempCurrRotor1 : 38|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_620 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_620 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ CurrentHV1 : 32|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ OutputTorque1 : 43|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ State1 : 12|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ Speed1 : 16|16@1+ (1,-32767) [-32767|32766] "1/min"  VCU
+ SG_ Checksum_204 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_204 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ dataInvrNr1 : 53|3@1+ (1,0) [0|5] ""  VCU
+ SG_ MaxTorque1 : 12|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ MinTorque1 : 23|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ Checksum_210 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_210 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ TrqCurrWoDstC1 : 34|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ TempCurrCool1 : 45|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Mode1 : 33|3@1+ (1,0) [0|7] "-"  VCU
+ SG_ CurrentLV1 : 22|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ VoltageLV1 : 55|9@1+ (0.125,0) [0|63.875] "V"  VCU
+ SG_ DcCurrentHV1 : 36|11@1+ (0.0625,-64) [-64|63.9375] "A"  VCU
+ SG_ VoltageHV1 : 12|10@1+ (1,0) [0|1023] "V"  VCU
+ SG_ TempCurr1 : 47|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ Checksum_220 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ MessageCounter_220 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ INV4_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV4_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV4_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV4_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV3_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV3_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV3_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV3_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ SurgeDamperTreshold5 : 12|10@1+ (1,0) [0|1021] "Nm"  INVCON5
+ SG_ SurgeDamperState5 : 0|2@1+ (1,0) [0|3] "-"  INVCON5
+ SG_ SurgeDamperMaxTorque5 : 2|10@1+ (1,0) [0|1021] "Nm"  INVCON5
+ SG_ SurgeDamperFactor5 : 24|8@1+ (0.03125,0) [0|7.96875] "-"  INVCON5
+ SG_ SurgeDamperTreshold4 : 12|10@1+ (1,0) [0|1021] "Nm"  INVCON4
+ SG_ SurgeDamperState4 : 0|2@1+ (1,0) [0|3] "-"  INVCON4
+ SG_ SurgeDamperMaxTorque4 : 2|10@1+ (1,0) [0|1021] "Nm"  INVCON4
+ SG_ SurgeDamperFactor4 : 24|8@1+ (0.03125,0) [0|7.96875] "-"  INVCON4
+ SG_ SurgeDamperTreshold3 : 12|10@1+ (1,0) [0|1021] "Nm"  INVCON3
+ SG_ SurgeDamperState3 : 0|2@1+ (1,0) [0|3] "-"  INVCON3
+ SG_ SurgeDamperMaxTorque3 : 2|10@1+ (1,0) [0|1021] "Nm"  INVCON3
+ SG_ SurgeDamperFactor3 : 24|8@1+ (0.03125,0) [0|7.96875] "-"  INVCON3
+ SG_ SurgeDamperTreshold1 : 12|10@1+ (1,0) [0|1021] "Nm"  INVCON1
+ SG_ SurgeDamperState1 : 0|2@1+ (1,0) [0|3] "-"  INVCON1
+ SG_ SurgeDamperMaxTorque1 : 2|10@1+ (1,0) [0|1021] "Nm"  INVCON1
+ SG_ SurgeDamperFactor1 : 24|8@1+ (0.03125,0) [0|7.96875] "-"  INVCON1
+ SG_ Checksum_315 : 0|8@1+ (1,0) [0|255] "-"  INVCON5
+ SG_ MessageCounter_315 : 38|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ MaxTorqueEngineSpeed5 : 53|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON5
+ SG_ MinTorqueEngineSpeed5 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON5
+ SG_ MaxDeltaSpeed5 : 26|12@1+ (8,-16380) [-16380|16364] "1/min"  INVCON5
+ SG_ FactorPContributionSmall5 : 17|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON5
+ SG_ FactorPContributionLarge5 : 8|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON5
+ SG_ Checksum_311 : 0|8@1+ (1,0) [0|255] "-"  INVCON4
+ SG_ MessageCounter_311 : 38|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ MaxTorqueEngineSpeed4 : 53|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON4
+ SG_ MinTorqueEngineSpeed4 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON4
+ SG_ MaxDeltaSpeed4 : 26|12@1+ (8,-16380) [-16380|16364] "1/min"  INVCON4
+ SG_ FactorPContributionSmall4 : 17|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON4
+ SG_ FactorPContributionLarge4 : 8|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON4
+ SG_ Checksum_30D : 0|8@1+ (1,0) [0|255] "-"  INVCON3
+ SG_ MessageCounter_30D : 38|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ MaxTorqueEngineSpeed3 : 53|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON3
+ SG_ MinTorqueEngineSpeed3 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON3
+ SG_ MaxDeltaSpeed3 : 26|12@1+ (8,-16380) [-16380|16364] "1/min"  INVCON3
+ SG_ FactorPContributionSmall3 : 17|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON3
+ SG_ FactorPContributionLarge3 : 8|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON3
+ SG_ Checksum_305 : 0|8@1+ (1,0) [0|255] "-"  INVCON1
+ SG_ MessageCounter_305 : 38|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ MaxTorqueEngineSpeed1 : 53|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON1
+ SG_ MinTorqueEngineSpeed1 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON1
+ SG_ MaxDeltaSpeed1 : 26|12@1+ (8,-16380) [-16380|16364] "1/min"  INVCON1
+ SG_ FactorPContributionSmall1 : 17|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON1
+ SG_ FactorPContributionLarge1 : 8|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON1
+ SG_ RequestedState1 : 28|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ DesiredSpeed1 : 12|16@1+ (1,-32767) [-32767|32766] "1/min"  INVCON1
+ SG_ DesiredTorque1 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON1
+ SG_ UdcSetP1 : 32|10@1+ (1,0) [0|1021] "V"  INVCON1
+ SG_ Checksum_104 : 0|8@1+ (1,0) [0|255] "-"  INVCON1
+ SG_ MessageCounter_104 : 8|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ StHvbMaiRly1 : 53|3@1+ (1,0) [0|7] "-"  INVCON1
+ SG_ MessageCounter_130 : 8|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ Checksum_130 : 0|8@1+ (1,0) [0|255] "-"  INVCON1
+ SG_ VoltageDemandLV1 : 44|9@1+ (0.125,0) [0|63.875] "V"  INVCON1
+ SG_ VoltageDemandHV1 : 12|10@1+ (1,0) [0|1021] "V"  INVCON1
+ SG_ ModeRequest1 : 53|3@1+ (1,0) [0|7] "-"  INVCON1
+ SG_ CurrentDemandLV1 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON1
+ SG_ CurrentDemandHV1 : 22|11@1+ (0.0625,-64) [-64|63.8125] "A"  INVCON1
+ SG_ UdcMin1 : 54|10@1+ (1,0) [0|1021] "V"  INVCON1
+ SG_ UdcMax1 : 44|10@1+ (1,0) [0|1021] "V"  INVCON1
+ SG_ IdcMin1 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON1
+ SG_ IdcMax1 : 22|11@1+ (1,-1023) [-1023|1022] "A"  INVCON1
+ SG_ MessageCounter_304 : 8|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ Checksum_304 : 0|8@1+ (1,0) [0|255] "-"  INVCON1
+ SG_ flgInvrCanActvnCmd1 : 12|1@1+ (1,0) [0|1] "-"  INVCON1
+ SG_ KI_Faktor1 : 49|15@1+ (0.0009765625,0) [0|31.999023438] "-"  INVCON1
+ SG_ MessageCounter_306 : 8|4@1+ (1,0) [0|15] "-"  INVCON1
+ SG_ Checksum_306 : 0|8@1+ (1,0) [0|255] "-"  INVCON1
+ SG_ MinTorqueLimit1 : 12|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON1
+ SG_ MaxTorqueLimit1 : 38|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON1
+ SG_ MaxTorqueGradient1 : 23|15@1+ (32,0) [0|1048480] "Nm/s"  INVCON1
+ SG_ RequestedState3 : 28|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ DesiredSpeed3 : 12|16@1+ (1,-32767) [-32767|32766] "1/min"  INVCON3
+ SG_ DesiredTorque3 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON3
+ SG_ UdcSetP3 : 32|10@1+ (1,0) [0|1021] "V"  INVCON3
+ SG_ Checksum_108 : 0|8@1+ (1,0) [0|255] "-"  INVCON3
+ SG_ MessageCounter_108 : 8|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ StHvbMaiRly3 : 53|3@1+ (1,0) [0|7] "-"  INVCON3
+ SG_ MessageCounter_134 : 8|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ Checksum_134 : 0|8@1+ (1,0) [0|255] "-"  INVCON3
+ SG_ VoltageDemandLV3 : 44|9@1+ (0.125,0) [0|63.875] "V"  INVCON3
+ SG_ VoltageDemandHV3 : 12|10@1+ (1,0) [0|1021] "V"  INVCON3
+ SG_ ModeRequest3 : 53|3@1+ (1,0) [0|7] "-"  INVCON3
+ SG_ CurrentDemandLV3 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON3
+ SG_ CurrentDemandHV3 : 22|11@1+ (0.0625,-64) [-64|63.8125] "A"  INVCON3
+ SG_ UdcMin3 : 54|10@1+ (1,0) [0|1021] "V"  INVCON3
+ SG_ UdcMax3 : 44|10@1+ (1,0) [0|1021] "V"  INVCON3
+ SG_ IdcMin3 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON3
+ SG_ IdcMax3 : 22|11@1+ (1,-1023) [-1023|1022] "A"  INVCON3
+ SG_ MessageCounter_30C : 8|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ Checksum_30C : 0|8@1+ (1,0) [0|255] "-"  INVCON3
+ SG_ flgInvrCanActvnCmd3 : 12|1@1+ (1,0) [0|1] "-"  INVCON3
+ SG_ KI_Faktor3 : 49|15@1+ (0.0009765625,0) [0|31.999023438] "-"  INVCON3
+ SG_ MessageCounter_30E : 8|4@1+ (1,0) [0|15] "-"  INVCON3
+ SG_ Checksum_30E : 0|8@1+ (1,0) [0|255] "-"  INVCON3
+ SG_ MinTorqueLimit3 : 12|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON3
+ SG_ MaxTorqueLimit3 : 38|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON3
+ SG_ MaxTorqueGradient3 : 23|15@1+ (32,0) [0|1048480] "Nm/s"  INVCON3
+ SG_ RequestedState4 : 28|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ DesiredSpeed4 : 12|16@1+ (1,-32767) [-32767|32766] "1/min"  INVCON4
+ SG_ DesiredTorque4 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON4
+ SG_ UdcSetP4 : 32|10@1+ (1,0) [0|1021] "V"  INVCON4
+ SG_ Checksum_10A : 0|8@1+ (1,0) [0|255] "-"  INVCON4
+ SG_ MessageCounter_10A : 8|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ StHvbMaiRly4 : 53|3@1+ (1,0) [0|7] "-"  INVCON4
+ SG_ MessageCounter_136 : 8|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ Checksum_136 : 0|8@1+ (1,0) [0|255] "-"  INVCON4
+ SG_ VoltageDemandLV4 : 44|9@1+ (0.125,0) [0|63.875] "V"  INVCON4
+ SG_ VoltageDemandHV4 : 12|10@1+ (1,0) [0|1021] "V"  INVCON4
+ SG_ ModeRequest4 : 53|3@1+ (1,0) [0|7] "-"  INVCON4
+ SG_ CurrentDemandLV4 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON4
+ SG_ CurrentDemandHV4 : 22|11@1+ (0.0625,-64) [-64|63.8125] "A"  INVCON4
+ SG_ UdcMin4 : 54|10@1+ (1,0) [0|1021] "V"  INVCON4
+ SG_ UdcMax4 : 44|10@1+ (1,0) [0|1021] "V"  INVCON4
+ SG_ IdcMin4 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON4
+ SG_ IdcMax4 : 22|11@1+ (1,-1023) [-1023|1022] "A"  INVCON4
+ SG_ MessageCounter_310 : 8|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ Checksum_310 : 0|8@1+ (1,0) [0|255] "-"  INVCON4
+ SG_ flgInvrCanActvnCmd4 : 12|1@1+ (1,0) [0|1] "-"  INVCON4
+ SG_ KI_Faktor4 : 49|15@1+ (0.0009765625,0) [0|31.999023438] "-"  INVCON4
+ SG_ MessageCounter_312 : 8|4@1+ (1,0) [0|15] "-"  INVCON4
+ SG_ Checksum_312 : 0|8@1+ (1,0) [0|255] "-"  INVCON4
+ SG_ MinTorqueLimit4 : 12|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON4
+ SG_ MaxTorqueLimit4 : 38|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON4
+ SG_ MaxTorqueGradient4 : 23|15@1+ (32,0) [0|1048480] "Nm/s"  INVCON4
+ SG_ RequestedState5 : 28|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ DesiredSpeed5 : 12|16@1+ (1,-32767) [-32767|32766] "1/min"  INVCON5
+ SG_ DesiredTorque5 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON5
+ SG_ UdcSetP5 : 32|10@1+ (1,0) [0|1021] "V"  INVCON5
+ SG_ Checksum_10C : 0|8@1+ (1,0) [0|255] "-"  INVCON5
+ SG_ MessageCounter_10C : 8|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ StHvbMaiRly5 : 53|3@1+ (1,0) [0|7] "-"  INVCON5
+ SG_ MessageCounter_138 : 8|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ Checksum_138 : 0|8@1+ (1,0) [0|255] "-"  INVCON5
+ SG_ VoltageDemandLV5 : 44|9@1+ (0.125,0) [0|63.875] "V"  INVCON5
+ SG_ VoltageDemandHV5 : 12|10@1+ (1,0) [0|1021] "V"  INVCON5
+ SG_ ModeRequest5 : 53|3@1+ (1,0) [0|7] "-"  INVCON5
+ SG_ CurrentDemandLV5 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON5
+ SG_ CurrentDemandHV5 : 22|11@1+ (0.0625,-64) [-64|63.8125] "A"  INVCON5
+ SG_ UdcMin5 : 54|10@1+ (1,0) [0|1021] "V"  INVCON5
+ SG_ UdcMax5 : 44|10@1+ (1,0) [0|1021] "V"  INVCON5
+ SG_ IdcMin5 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON5
+ SG_ IdcMax5 : 22|11@1+ (1,-1023) [-1023|1022] "A"  INVCON5
+ SG_ MessageCounter_314 : 8|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ Checksum_314 : 0|8@1+ (1,0) [0|255] "-"  INVCON5
+ SG_ flgInvrCanActvnCmd5 : 12|1@1+ (1,0) [0|1] "-"  INVCON5
+ SG_ KI_Faktor5 : 49|15@1+ (0.0009765625,0) [0|31.999023438] "-"  INVCON5
+ SG_ MessageCounter_316 : 8|4@1+ (1,0) [0|15] "-"  INVCON5
+ SG_ Checksum_316 : 0|8@1+ (1,0) [0|255] "-"  INVCON5
+ SG_ MinTorqueLimit5 : 12|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON5
+ SG_ MaxTorqueLimit5 : 38|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON5
+ SG_ MaxTorqueGradient5 : 23|15@1+ (32,0) [0|1048480] "Nm/s"  INVCON5
+ SG_ NewSignal_0008 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0011 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR1 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR3 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR10 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR9 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR6 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PY_CPT_STR4 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Torque_Limited_By_BMS : 7|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_LabVIEW_CONTROL_Req : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_Gas_LV_CMD : 15|16@0+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ VCU_Dir_LV_CMD : 31|16@0+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ VCU_LabVIEW_Charge_Req : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_LabVIEW_Charge_Current_CMD : 55|16@0+ (0.05,0) [0|3200] "" Vector__XXX
+ SG_ VCU_Dir_learning_min : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Dir_learning_max : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Dir_raw : 39|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Dir_ranged_out : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Gas_learning_min : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Gas_learning_max : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Gas_raw : 39|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Gas_ranged_out : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_Dir_max_per_with_learning : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ VCU_Dir_max_percentage_only : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ VCU_Gas_max_per_with_learning : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ VCU_Gas_max_percentage_only : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ VCU_System_State_request : 7|8@0+ (1,0) [0|0] ""  VCU
+ SG_ SleepCommand : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Inv_Current_Limit : 23|8@0+ (1,0) [0|255] "A" Vector__XXX
+ SG_ VCU_Alive_Counter : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_BAT_P : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_BAT_N : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_CHARGER_P : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_CHARGER_N : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_DCDC_P : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_relai_DCDC_N : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_APP_LVL0_STATE : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_APP_LVL1_STATE : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_reset_Source : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_APP_LVL2_STATE : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_APP_LVL3_STATE : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_VAL_MOT_STATE : 19|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_General_Error : 23|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 827 BMS_PowerPrediction: 8 BMS
+ SG_ BMS_dischargePowerPred_BMS : 55|16@0+ (0.01,0) [0|650] "kW"  PT
+ SG_ BMS_regenPowerPred_BMS : 39|16@0+ (0.01,0) [0|650] "kW"  PT
+ SG_ BMS_dischargeCurrentPred_BMS : 23|16@0+ (0.05,0) [0|3200] "A"  PT
+ SG_ BMS_regenCurrentPred_BMS : 7|16@0+ (0.05,0) [0|3200] "A"  PT
+
+BO_ 826 BMS_FluidMeasUserSOC: 8 BMS
+ SG_ BMS_fluidPressureInlet_BMS : 55|8@0+ (10,0) [0|2540] "mbar"  PT
+ SG_ BMS_userSOC_BMS : 39|16@0+ (0.01,0) [0|100] "PCT"  PT
+ SG_ BMS_fluidTemperatureOutlet_BMS : 23|8@0+ (0.5,-40) [-40|85] "C"  PT
+ SG_ BMS_fluidTemperatureInlet_BMS : 7|8@0+ (0.5,-40) [-40|85] "C"  PT
+
+BO_ 825 BMS_StringVoltages: 8 BMS
+ SG_ BMS_linkVoltageAuxiliary2_BMS : 55|16@0+ (0.02,0) [0|1200] "V"  PT
+ SG_ BMS_linkVoltageAuxiliary1_BMS : 39|16@0+ (0.02,0) [0|1200] "V"  PT
+ SG_ BMS_maxStringVoltage_BMS : 23|16@0+ (0.02,0) [0|1200] "V"  PT
+ SG_ BMS_minStringVoltage_BMS : 7|16@0+ (0.02,0) [0|1200] "V"  PT
+
+BO_ 823 BMS_ModuleTemperatures: 7 BMS
+ SG_ BMS_maxDewPointTemperature_BMS : 55|8@0+ (0.5,-40) [-40|85] "C"  PT
+ SG_ BMS_minModuleTemperatureIdx_BMS : 23|16@0+ (1,0) [0|65535] ""  PT
+ SG_ BMS_maxModuleTemperatureIdx_BMS : 39|16@0+ (1,0) [0|65535] ""  PT
+ SG_ BMS_maxModuleTemperature_BMS : 15|8@0+ (0.5,-40) [-40|85] "C"  PT
+ SG_ BMS_minModuleTemperature_BMS : 7|8@0+ (0.5,-40) [-40|85] "C"  PT
+
+BO_ 31 BMS_SC01_State: 5 SC
+ SG_ BMS_linkVoltage_SC01 : 7|16@0+ (0.04,-1250) [-1250|1250] "V"  PT
+ SG_ BMS_emergencyRequest_SC01 : 19|4@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_alive_SC01 : 27|4@0+ (1,0) [0|255] ""  PT
+ SG_ BMS_CRC_SC01 : 39|8@0+ (1,0) [0|255] ""  PT
+
+BO_ 819 BMS_Charge: 4 BMS
+ SG_ BMS_chargeVoltageLimit_BMS : 23|16@0+ (0.02,0) [0|1200] "V"  PT
+ SG_ BMS_chargeCurrentSetpoint_BMS : 7|16@0+ (0.05,0) [0|3200] "A"  PT
+
+BO_ 822 BMS_IsolationSOC: 8 BMS
+ SG_ BMS_maxSOC_BMS : 55|16@0+ (0.01,0) [0|100] "PCT"  PT
+ SG_ BMS_minSOC_BMS : 39|16@0+ (0.01,0) [0|100] "PCT"  PT
+ SG_ BMS_isolationResistanceInt_BMS : 23|16@0+ (2,0) [0|130000] "kOhm"  PT
+ SG_ BMS_isolationResistanceExt_BMS : 7|16@0+ (2,0) [0|130000] "kOhm"  PT
+
+BO_ 820 BMS_EnergySOH: 8 BMS
+ SG_ BMS_maxSOH_BMS : 31|8@0+ (0.5,0) [0|120] "PCT"  PT
+ SG_ BMS_minSOH_BMS : 23|8@0+ (0.5,0) [0|120] "PCT"  PT
+ SG_ BMS_energyAvailable_BMS : 7|16@0+ (0.01,0) [0|650] "kWh"  PT
+
+BO_ 821 BMS_BrickVoltages: 8 BMS
+ SG_ BMS_maxBrickVoltageIndex_BMS : 55|16@0+ (1,0) [0|65535] ""  PT
+ SG_ BMS_minBrickVoltageIndex_BMS : 39|16@0+ (1,0) [0|65535] ""  PT
+ SG_ BMS_maxBrickVoltage_BMS : 23|16@0+ (0.0001,0) [0|6.5] "V"  PT
+ SG_ BMS_minBrickVoltage_BMS : 7|16@0+ (0.0001,0) [0|6.5] "V"  PT
+
+BO_ 818 BMS_DriveLimits: 8 BMS
+ SG_ BMS_dischargeCurrentLimit_BMS : 55|16@0+ (0.05,0) [0|3200] "A"  PT
+ SG_ BMS_regenCurrentLimit_BMS : 39|16@0+ (0.05,0) [0|3200] "A"  PT
+ SG_ BMS_minVoltageLimit_BMS : 23|16@0+ (0.02,0) [0|1200] "V"  PT
+ SG_ BMS_maxVoltageLimit_BMS : 7|16@0+ (0.02,0) [0|1200] "V"  PT
+
+BO_ 282 BMS_State: 5 BMS
+ SG_ BMS_stateTRIndex_BMS : 39|5@0+ (1,0) [0|31] ""  PT
+ SG_ BMS_stateTR_BMS : 19|4@0+ (1,0) [0|15] ""  PT
+ SG_ BMS_cntrStateAux4_BMS : 31|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_cntrStateAux3_BMS : 29|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_cntrStateAux2_BMS : 27|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_cntrStateAux1_BMS : 25|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_hvilState_BMS : 21|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_isolationError_BMS : 23|2@0+ (1,0) [0|3] ""  PT
+ SG_ BMS_isolationState_BMS : 7|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_chargeState_BMS : 5|2@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_state_BMS : 3|4@0+ (1,0) [0|0] ""  PT
+ SG_ BMS_numberOfConnectedStrings_BMS : 15|8@0+ (1,0) [0|0] ""  PT
+
+BO_ 817 BMS_CurrentVoltage: 8 BMS
+ SG_ BMS_regenCurrentResidual_BMS : 55|16@0+ (0.1,-3200) [-3200|3200] "A"  PT
+ SG_ BMS_dischargeCurrentResidual_BMS : 39|16@0+ (0.1,-3200) [-3200|3200] "A"  PT
+ SG_ BMS_current_BMS : 23|16@0+ (0.1,-3200) [-3200|3200] "A"  PT
+ SG_ BMS_linkVoltage_BMS : 7|16@0+ (0.02,0) [0|1200] "V"  PT
+
+BO_ 283 BMS_PT_Request: 7 PT
+ SG_ BMS_cntrRequestAux4_PT : 43|1@0+ (1,0) [0|0] ""  BMS
+ SG_ BMS_cntrRequestAux3_PT : 42|1@0+ (1,0) [0|0] ""  BMS
+ SG_ BMS_cntrRequestAux2_PT : 41|1@0+ (1,0) [0|0] ""  BMS
+ SG_ BMS_cntrRequestAux1_PT : 40|1@0+ (1,0) [0|0] ""  BMS
+ SG_ BMS_rangeRequest_PT : 15|4@0+ (1,0) [0|0] ""  PT,BMS
+ SG_ BMS_CRC_PT : 55|8@0+ (1,0) [0|255] ""  PT,BMS
+ SG_ BMS_alive_PT : 47|4@0+ (1,0) [0|255] ""  PT,BMS
+ SG_ BMS_chargePowerAvailable_PT : 23|16@0+ (0.01,0) [0|650] "kW"  PT,BMS
+ SG_ BMS_sleepRequest_PT : 11|4@0+ (1,0) [0|0] ""  PT,BMS
+ SG_ BMS_stateRequest_PT : 3|4@0+ (1,0) [0|0] ""  PT,BMS
+ SG_ BMS_isolationRequest_PT : 7|4@0+ (1,0) [0|0] ""  PT,BMS
+
+BO_ 289 INVERTER_VCU_INV2_06: 4 VCU
+ SG_ INV_SurgeDamperTreshold2 : 12|10@1+ (1,0) [0|1021] "Nm"  INVCON2
+ SG_ INV_SurgeDamperState2 : 0|2@1+ (1,0) [0|3] "-"  INVCON2
+ SG_ INV_SurgeDamperMaxTorque2 : 2|10@1+ (1,0) [0|1021] "Nm"  INVCON2
+ SG_ INV_SurgeDamperFactor2 : 24|8@1+ (0.03125,0) [0|7.96875] "-"  INVCON2
+
+BO_ 1663 INVERTER_INV0_VCU_07: 8 INVCON0
+ SG_ INV0_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV0_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV0_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV0_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+
+BO_ 1665 INVERTER_INV2_VCU_07: 8 INVCON2
+ SG_ INV2_FailCode4 : 48|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV2_FailCode3 : 32|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV2_FailCode2 : 16|16@1+ (1,0) [0|65535] "-"  VCU
+ SG_ INV2_FailCode1 : 0|16@1+ (1,0) [0|65535] "-"  VCU
+
+BO_ 777 INVERTER_VCU_INV2_02: 8 VCU
+ SG_ INV_Checksum_309 : 0|8@1+ (1,0) [0|255] "-"  INVCON2
+ SG_ INV_MessageCounter_309 : 38|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_MaxTorqueEngineSpeed2 : 53|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON2
+ SG_ INV_MinTorqueEngineSpeed2 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON2
+ SG_ INV_MaxDeltaSpeed2 : 26|12@1+ (8,-16380) [-16380|16364] "1/min"  INVCON2
+ SG_ INV_FactorPContributionSmall2 : 17|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON2
+ SG_ INV_FactorPContributionLarge2 : 8|9@1+ (0.0009765625,0) [0|0.4990234375] "-"  INVCON2
+
+BO_ 110 INVERTER_BMS_VCU_INV_01: 7 VCU
+ SG_ INV_bErrEmergencyDischargeReq : 36|1@1+ (1,0) [0|1] ""  INVCON1,INVCON2,INVCON3,INVCON5,INVCON4
+ SG_ INV_MessageCounter_6E : 8|4@1+ (1,0) [0|15] "-"  INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_Checksum_6E : 0|8@1+ (1,0) [0|255] "-"  INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_ContactorState : 48|4@1+ (1,0) [0|7] "-"  INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_Current : 12|12@1+ (0.25,-511) [-511|512.25] "A"  INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_Voltage : 24|12@1+ (0.25,0) [0|1023.25] "V"  INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+
+BO_ 262 INVERTER_VCU_INV2_04: 7 VCU
+ SG_ INV_RequestedState2 : 28|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_DesiredSpeed2 : 12|16@1+ (1,-32767) [-32767|32766] "1/min"  INVCON2
+ SG_ INV_DesiredTorque2 : 42|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON2
+ SG_ INV_UdcSetP2 : 32|10@1+ (1,0) [0|1021] "V"  INVCON2
+ SG_ INV_Checksum_106 : 0|8@1+ (1,0) [0|255] "-"  INVCON2
+ SG_ INV_MessageCounter_106 : 8|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_StHvbMaiRly2 : 53|3@1+ (1,0) [0|7] "-"  INVCON2
+
+BO_ 306 DCDC_VCU_DC2_01: 7 VCU
+ SG_ INV_MessageCounter_132 : 8|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_Checksum_132 : 0|8@1+ (1,0) [0|255] "-"  INVCON2
+ SG_ INV_VoltageDemandLV2 : 44|9@1+ (0.125,0) [0|63.875] "V"  INVCON2
+ SG_ INV_VoltageDemandHV2 : 12|10@1+ (1,0) [0|1021] "V"  INVCON2
+ SG_ INV_ModeRequest2 : 53|3@1+ (1,0) [0|7] "-"  INVCON2
+ SG_ INV_CurrentDemandLV2 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON2
+ SG_ INV_CurrentDemandHV2 : 22|11@1+ (0.0625,-64) [-64|63.8125] "A"  INVCON2
+
+BO_ 776 INVERTER_VCU_INV2_01: 8 VCU
+ SG_ INV_UdcMin2 : 54|10@1+ (1,0) [0|1021] "V"  INVCON2
+ SG_ INV_UdcMax2 : 44|10@1+ (1,0) [0|1021] "V"  INVCON2
+ SG_ INV_IdcMin2 : 33|11@1+ (1,-1023) [-1023|1022] "A"  INVCON2
+ SG_ INV_IdcMax2 : 22|11@1+ (1,-1023) [-1023|1022] "A"  INVCON2
+ SG_ INV_MessageCounter_308 : 8|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_Checksum_308 : 0|8@1+ (1,0) [0|255] "-"  INVCON2
+ SG_ INV_flgInvrCanActvnCmd2 : 12|1@1+ (1,0) [0|1] "-"  INVCON2
+
+BO_ 778 INVERTER_VCU_INV2_03: 8 VCU
+ SG_ INV_KI_Faktor2 : 49|15@1+ (0.0009765625,0) [0|31.999023438] "-"  INVCON2
+ SG_ INV_MessageCounter_30A : 8|4@1+ (1,0) [0|15] "-"  INVCON2
+ SG_ INV_Checksum_30A : 0|8@1+ (1,0) [0|255] "-"  INVCON2
+ SG_ INV_MinTorqueLimit2 : 12|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON2
+ SG_ INV_MaxTorqueLimit2 : 38|11@1+ (1,-1023) [-1023|1022] "Nm"  INVCON2
+ SG_ INV_MaxTorqueGradient2 : 23|15@1+ (32,0) [0|1048480] "Nm/s"  INVCON2
+
+BO_ 518 INVERTER_INV2_VCU_01: 7 INVCON2
+ SG_ INV_CurrentHV2 : 32|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ INV_OutputTorque2 : 43|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ INV_State2 : 12|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ INV_Speed2 : 16|16@1+ (1,-32767) [-32767|32766] "1/min"  VCU
+ SG_ INV_Checksum_206 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_206 : 8|4@1+ (1,0) [0|15] "-"  VCU
+
+BO_ 530 INVERTER_INV2_VCU_02: 7 INVCON2
+ SG_ INV_dataInvrNr2 : 53|3@1+ (1,0) [0|5] ""  VCU
+ SG_ INV_MaxTorque2 : 12|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ INV_MinTorque2 : 23|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ INV_Checksum_212 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_212 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ INV_TrqCurrWoDstC2 : 34|11@1+ (1,-1023) [-1023|1024] "Nm"  VCU
+ SG_ INV_TempCurrCool2 : 45|8@1+ (1,-40) [-40|213] "°C"  VCU
+
+BO_ 546 DCDC_DC2_VCU_01: 8 INVCON2
+ SG_ INV_Mode2 : 33|3@1+ (1,0) [0|7] "-"  VCU
+ SG_ INV_CurrentLV2 : 22|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ INV_VoltageLV2 : 55|9@1+ (0.125,0) [0|63.875] "V"  VCU
+ SG_ INV_DcCurrentHV2 : 36|11@1+ (0.0625,-64) [-64|63.9375] "A"  VCU
+ SG_ INV_VoltageHV2 : 12|10@1+ (1,0) [0|1023] "V"  VCU
+ SG_ INV_TempCurr2 : 47|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ INV_Checksum_222 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_222 : 8|4@1+ (1,0) [0|15] "-"  VCU
+
+BO_ 1570 INVERTER_INV2_VCU_04: 6 INVCON2
+ SG_ INV_ElectricMachineTemperature2 : 16|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ INV_InverterTemperature2 : 24|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ INV_UT30Curr2 : 32|6@1+ (0.5,0) [0|31.5] "V"  VCU
+ SG_ INV_TempCurrRotor2 : 38|8@1+ (1,-40) [-40|213] "°C"  VCU
+ SG_ INV_Checksum_622 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_622 : 8|4@1+ (1,0) [0|15] "-"  VCU
+
+BO_ 1043 DCDC_DC2_VCU_03: 6 INVCON2
+ SG_ INV_DC_MaxCurrentLV2 : 35|11@1+ (1,-1023) [-1023|1024] "A"  VCU
+ SG_ INV_DC_MaxCurrentHV2 : 24|8@1+ (0.25,0) [0|63.75] "A"  VCU
+ SG_ INV_bDernUndrUdcLV2 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_ErrShtOff2 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernOvrIdcLv2 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernOvrIdcHV2 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernOvrUdcLv2 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernUndrUdcHV2 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_ErrLimitedPerformance2 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernTemp_DCDC2 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernOvrUdcHV2 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bErrVltg2 : 21|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_Checksum_413 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_413 : 8|4@1+ (1,0) [0|15] "-"  VCU
+
+BO_ 1026 INVERTER_INV2_VCU_03: 3 INVCON2
+ SG_ INV_EmergencyShutoffRequest2 : 22|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernOvrUdc2 : 12|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernUndrUdc2 : 13|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_Checksum_402 : 0|8@1+ (1,0) [0|255] "-"  VCU
+ SG_ INV_MessageCounter_402 : 8|4@1+ (1,0) [0|15] "-"  VCU
+ SG_ INV_bDernOvrIdc2 : 14|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernUndrIdc2 : 15|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernTemp2 : 16|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDiagReq2 : 17|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernTrqMin2 : 18|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDernTrqMax2 : 19|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bDstActv2 : 20|1@1+ (1,0) [0|1] "-"  VCU
+ SG_ INV_bReadyHV2 : 21|1@1+ (1,0) [0|1] "-"  VCU
+
+BO_ 1757 INVERTER_DIAG_ALL_01: 8 VCU
+ SG_ INV_DIAG_Downtime : 54|10@1+ (32,0) [0|32736] "s"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Downtime_state : 53|1@1+ (1,0) [0|1] ""  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Second : 47|6@1+ (1,0) [0|59] "s"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Minute : 41|6@1+ (1,0) [0|59] "min"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Hour : 36|5@1+ (1,0) [0|23] "h"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Day : 31|5@1+ (1,0) [1|31] "d"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Month : 27|4@1+ (1,0) [1|12] "m"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Year : 20|7@1+ (1,2000) [2000|2127] "y"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+ SG_ INV_DIAG_Mileage : 0|20@1+ (1,0) [0|1048575] "km"  INVCON0,INVCON1,INVCON2,INVCON3,INVCON4,INVCON5
+
+BO_ 1849 CHARGEUR_NLG_ACT_PLUG: 8 NLG6
+ SG_ NLG_TempCoolPlate : 47|8@0+ (1,-50) [-50|204] "GradC"  Control
+ SG_ NLG_S_AcVoltDerating : 31|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_CoolingRequest : 38|7@0+ (1,0) [0|100] "%"  Control
+ SG_ NLG_S_AcDeratingNoisy : 30|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_AcPhaseUsd : 29|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_AcPhaseDet : 26|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_StatusCP : 7|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_StatusPP : 22|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_S_CP_X1 : 4|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_CP_SCC : 3|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_AcCurrMaxPP : 19|4@0+ (1,0) [0|15] ""  Control
+ SG_ NLG_AcCurrMaxCP : 1|10@0+ (0.1,0) [0|80] "A"  Control
+
+BO_ 1113 CHARGEUR_D_RS_NLG: 8 NLG6
+ SG_ NLG_DiagDataResponse : 16|48@1+ (1,0) [0|0] ""  Control
+ SG_ NLG_DiagTPCI : 8|8@1+ (1,0) [0|0] ""  Control
+ SG_ NLG_DiagTA : 0|8@1+ (1,0) [0|0] ""  Control
+
+BO_ 1105 CHARGEUR_D_RQ_NLG: 8 Control
+ SG_ NLG_DiagDataRequest : 16|48@1+ (1,0) [0|0] ""  NLG6
+ SG_ DiagTPCI : 8|8@1+ (1,0) [0|0] ""  NLG6
+ SG_ DiagTA : 0|8@1+ (1,0) [0|0] ""  NLG6
+
+BO_ 1089 CHARGEUR_D_RQ_UDS: 8 Control
+ SG_ NLG_FunctionalData : 0|64@1- (1,0) [0|0] ""  NLG6
+
+BO_ 2600147972 CHARGEUR_XCP_DTO_NLG: 8 NLG6
+ SG_ NLG_XCP_DTO_NLG : 7|64@0+ (1,0) [0|0] ""  Control
+
+BO_ 2600147968 CHARGEUR_XCP_CRO_NLG: 8 Control
+ SG_ NLG_XCP_CRO_NLG : 7|64@0+ (1,0) [0|0] ""  NLG6
+
+BO_ 1049 CHARGEUR_NLG_PARAM_TX: 8 NLG6
+ SG_ NLG_PARAM_RP : 7|64@0+ (1,0) [0|1.8446744074e+19] ""  Control
+
+BO_ 1041 CHARGEUR_NLG_PARAM_RX: 8 Control
+ SG_ NLG_PARAM_RQ : 7|64@0+ (1,0) [0|1.8446744074e+19] ""  NLG6
+
+BO_ 1833 CHARGEUR_NLG_ACT_AC: 8 NLG6
+ SG_ NLG_S_AcPhaseRot : 31|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_AcPowTotAct : 63|8@0+ (100,0) [0|25000] "W"  Control
+ SG_ NLG_AcFreqAct : 30|7@0+ (1,0) [0|127] "Hz"  Control
+ SG_ NLG_AcVoltL3Act : 23|8@0+ (2,0) [0|510] "V"  Control
+ SG_ NLG_AcVoltL2Act : 15|8@0+ (2,0) [0|510] "V"  Control
+ SG_ NLG_AcVoltL1Act : 7|8@0+ (2,0) [0|510] "V"  Control
+ SG_ NLG_AcCurrL3Act : 55|8@0+ (1,-127) [-127|127] "A"  Control
+ SG_ NLG_AcCurrL2Act : 47|8@0+ (1,-127) [-127|127] "A"  Control
+ SG_ NLG_AcCurrL1Act : 39|8@0+ (1,-127) [-127|127] "A"  Control
+
+BO_ 1832 CHARGEUR_NLG_ACT_LIM: 8 NLG6
+ SG_ NLG_AcCurrHwAvl : 55|8@0+ (0.5,0) [0|100] "A"  Control
+ SG_ NLG_S_HwEnable : 58|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_AcDet : 60|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_ConLocked : 61|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_CtrlPilotDet : 62|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_ProximityDet : 63|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_HwWakeup : 59|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_StateAct : 23|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_StateCtrlPilot : 7|3@0+ (1,0) [0|7] ""  Control
+ SG_ NLG_S_ProximityLim : 39|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_IntTempLim : 36|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_CtrlPilotLim : 38|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_ConTempLim : 37|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_AcCurrLim : 35|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_War : 56|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_Err : 57|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_DcHvVoltLim : 19|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_S_DcHvCurrLim : 20|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_AcCurrMaxAct : 34|11@0+ (0.1,-102.4) [-100|100] "A"  Control
+ SG_ NLG_DcHvVoltAct : 4|13@0+ (0.1,0) [0|800] "V"  Control
+ SG_ NLG_DcHvCurrAct : 18|11@0+ (0.1,-102.4) [-100|100] "A"  Control
+
+BO_ 1801 CHARGEUR_NLG_ACT_INT: 8 NLG6
+ SG_ NLG_DcHvAhAct : 55|16@0+ (0.01,0) [0|655.35] "Ah"  Control
+ SG_ NLG_DcHvWhAct : 23|16@0+ (1,0) [0|65535] "Wh"  Control
+ SG_ NLG_AcWhAct : 7|16@0+ (1,0) [0|65535] "Wh"  Control
+ SG_ NLG_TempCon : 47|8@0+ (1,-50) [-50|204] "GradC"  Control
+ SG_ NLG_MaxTempAct : 39|8@0+ (1,-50) [-50|204] "GradC"  Control
+
+BO_ 1945 CHARGEUR_NLG_ACT_ERR: 8 NLG6
+ SG_ NLG_E_LatchFPGA : 29|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_Inernal : 12|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_AcInterruption : 18|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_PRELOAD : 59|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_TempInt : 41|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_TempCon : 20|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_DcHvVoltRange : 19|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_UZK : 28|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_TPON : 27|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_BURST : 26|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_PRELOAD : 25|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_TempInt : 13|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_FPGA : 56|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_CanTimeout : 48|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_WrongFPGA : 1|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_AcVoltage : 57|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_AcFrequency : 58|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_ConLocked : 55|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_OverTemp : 31|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_PowRed : 40|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_WrongHW : 0|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_ConLocked : 21|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_IntSupply : 15|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_DcHvVoltRed : 14|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_HvIsoPos : 9|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_HvIsoNeg : 10|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_NVSRam : 5|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_FpgaInit : 2|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_Flash : 6|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_Interlock : 22|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_Crash : 23|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_CanValue : 17|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_CanMsgLost : 16|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_Watchdog : 39|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_CanTx : 51|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_CanRx : 50|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_W_CanOff : 49|1@0+ (1,0) [0|1] ""  Control
+ SG_ NLG_E_OsTrap : 7|1@0+ (1,0) [0|1] ""  Control
+
+BO_ 1809 CHARGEUR_NLG_DEM_LIM: 8 Control
+ SG_ NLG_LedDem : 39|4@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_C_EnPhaseShift : 52|1@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_AcPhaseShift : 51|12@0+ (0.1,0) [0|360] "°"  NLG6
+ SG_ NLG_C_UnlockConRq : 6|1@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_C_VentiRq : 5|1@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_StateDem : 23|3@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_C_ClrError : 7|1@0+ (1,0) [0|1] ""  NLG6
+ SG_ NLG_AcCurrLimMax : 34|11@0+ (0.1,-102.4) [-32|32] "A"  NLG6
+ SG_ NLG_DcHvCurrLimMax : 18|11@0+ (0.1,-102.4) [-62.5|62.5] "A"  NLG6
+ SG_ NLG_DcHvVoltLimMax : 4|13@0+ (0.1,0) [350|450] "V"  NLG6
+
+
+
+CM_ "$Revision: 5812 $";
+CM_ BU_ NLG6 "on-board charger";
+CM_ SG_ 3221225472 EmergencyShutoffRequest5 "Emergency shut off requested by inverter ECU";
+CM_ SG_ 3221225472 bDernOvrUdc5 "Derating because of overvoltage HV";
+CM_ SG_ 3221225472 bDernUndrUdc5 "Derating because of undervoltage HV";
+CM_ SG_ 3221225472 Checksum_408 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_408 "Message counter signal for frame";
+CM_ SG_ 3221225472 bDernOvrIdc5 "Derating because of overcurrent Inverter5 E-machine";
+CM_ SG_ 3221225472 bDernUndrIdc5 "Derating because of overcurrent regenerative Inverter5 E-machine";
+CM_ SG_ 3221225472 bDernTemp5 "Derating because of overtemperature E-machine";
+CM_ SG_ 3221225472 bDiagReq5 "Diag request for e-machine Inverter5 Calibration";
+CM_ SG_ 3221225472 bDernTrqMin5 "Derating because of max torque regenerative";
+CM_ SG_ 3221225472 bDernTrqMax5 "Derating because of max torque";
+CM_ SG_ 3221225472 bDstActv5 "Surge Damping active";
+CM_ SG_ 3221225472 bReadyHV5 "HV voltage operational";
+CM_ SG_ 3221225472 INV1_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV1_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV1_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV1_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV5_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV5_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV5_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV5_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 CurrentHV3 "HV current at the DC/AC converter";
+CM_ SG_ 3221225472 OutputTorque3 "output torque which is currently provided by the electric machine";
+CM_ SG_ 3221225472 State3 "Information of the  State3 of the electric machine";
+CM_ SG_ 3221225472 Speed3 "rotational speed of electric machine";
+CM_ SG_ 3221225472 Checksum_208 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_208 "Message counter signal for frame";
+CM_ SG_ 3221225472 CurrentHV5 "HV current at the DC/AC converter";
+CM_ SG_ 3221225472 OutputTorque5 "output torque which is currently provided by the electric machine";
+CM_ SG_ 3221225472 State5 "Information of the  State5 of the electric machine";
+CM_ SG_ 3221225472 Speed5 "rotational speed of electric machine";
+CM_ SG_ 3221225472 Checksum_20C "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_20C "Message counter signal for frame";
+CM_ SG_ 3221225472 dataInvrNr5 "Inverter number which has been configured via UDS/BODAS";
+CM_ SG_ 3221225472 MaxTorque5 "Electric machine torque value";
+CM_ SG_ 3221225472 MinTorque5 "Total brake torque minimum";
+CM_ SG_ 3221225472 Checksum_218 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_218 "Message counter signal for frame";
+CM_ SG_ 3221225472 TrqCurrWoDstC5 "e-machine torque without part of damping control";
+CM_ SG_ 3221225472 TempCurrCool5 "temperature of Inverter5 cooling water";
+CM_ SG_ 3221225472 Mode5 "State5 DC/DC converter";
+CM_ SG_ 3221225472 CurrentLV5 "current on low voltage side";
+CM_ SG_ 3221225472 VoltageLV5 "voltage on low voltage side";
+CM_ SG_ 3221225472 DcCurrentHV5 "current of the DC/DC converter at high voltage side";
+CM_ SG_ 3221225472 VoltageHV5 "voltage at high voltage side";
+CM_ SG_ 3221225472 TempCurr5 " temperature of DCDC";
+CM_ SG_ 3221225472 Checksum_228 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_228 "Message counter signal for frame";
+CM_ SG_ 3221225472 ElectricMachineTemperature5 "Current temperature of electric machine";
+CM_ SG_ 3221225472 InverterTemperature5 "Current temperature of Inverter5";
+CM_ SG_ 3221225472 UT30Curr5 "Current UT30 Voltage at Inverter5";
+CM_ SG_ 3221225472 TempCurrRotor5 "Temperature of rotor";
+CM_ SG_ 3221225472 Checksum_628 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_628 "Message counter signal for frame";
+CM_ SG_ 3221225472 DC_MaxCurrentLV5 "Maximal allowed current at low voltage side";
+CM_ SG_ 3221225472 DC_MaxCurrentHV5 "Maximal allowed current at high voltage side";
+CM_ SG_ 3221225472 bDernUndrUdcLV5 "Derating because of Low Voltage at LV";
+CM_ SG_ 3221225472 ErrShtOff5 "Derating because of DCDC shutdown";
+CM_ SG_ 3221225472 bDernOvrIdcLv5 "Derating because of high current at LV";
+CM_ SG_ 3221225472 bDernOvrIdcHV5 "Derating because of high current at HV";
+CM_ SG_ 3221225472 bDernOvrUdcLv5 "Derating because of error high voltage at LV";
+CM_ SG_ 3221225472 bDernUndrUdcHV5 "Derating because of error low voltage at HV";
+CM_ SG_ 3221225472 ErrLimitedPerformance5 "limited performance of DCDC";
+CM_ SG_ 3221225472 bDernTemp_DCDC5 "Derating because of overtemperature DCDC";
+CM_ SG_ 3221225472 bDernOvrUdcHV5 "Derating because of high voltage at HV";
+CM_ SG_ 3221225472 bErrVltg5 "shutdown because of Over/Undervoltage at I/O side";
+CM_ SG_ 3221225472 Checksum_419 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_419 "Message counter signal for frame";
+CM_ SG_ 3221225472 EmergencyShutoffRequest4 "Emergency shut off requested by inverter ECU";
+CM_ SG_ 3221225472 bDernOvrUdc4 "Derating because of overvoltage HV";
+CM_ SG_ 3221225472 bDernUndrUdc4 "Derating because of undervoltage HV";
+CM_ SG_ 3221225472 Checksum_406 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_406 "Message counter signal for frame";
+CM_ SG_ 3221225472 bDernOvrIdc4 "Derating because of overcurrent Inverter4 E-machine";
+CM_ SG_ 3221225472 bDernUndrIdc4 "Derating because of overcurrent regenerative Inverter4 E-machine";
+CM_ SG_ 3221225472 bDernTemp4 "Derating because of overtemperature E-machine";
+CM_ SG_ 3221225472 bDiagReq4 "Diag request for e-machine Inverter4 Calibration";
+CM_ SG_ 3221225472 bDernTrqMin4 "Derating because of max torque regenerative";
+CM_ SG_ 3221225472 bDernTrqMax4 "Derating because of max torque";
+CM_ SG_ 3221225472 bDstActv4 "Surge Damping active";
+CM_ SG_ 3221225472 bReadyHV4 "HV voltage operational";
+CM_ SG_ 3221225472 DC_MaxCurrentLV4 "Maximal allowed current at low voltage side";
+CM_ SG_ 3221225472 DC_MaxCurrentHV4 "Maximal allowed current at high voltage side";
+CM_ SG_ 3221225472 bDernUndrUdcLV4 "Derating because of Low Voltage at LV";
+CM_ SG_ 3221225472 ErrShtOff4 "Derating because of DCDC shutdown";
+CM_ SG_ 3221225472 bDernOvrIdcLv4 "Derating because of high current at LV";
+CM_ SG_ 3221225472 bDernOvrIdcHV4 "Derating because of high current at HV";
+CM_ SG_ 3221225472 bDernOvrUdcLv4 "Derating because of error high voltage at LV";
+CM_ SG_ 3221225472 bDernUndrUdcHV4 "Derating because of error low voltage at HV";
+CM_ SG_ 3221225472 ErrLimitedPerformance4 "limited performance of DCDC";
+CM_ SG_ 3221225472 bDernTemp_DCDC4 "Derating because of overtemperature DCDC";
+CM_ SG_ 3221225472 bDernOvrUdcHV4 "Derating because of high voltage at HV";
+CM_ SG_ 3221225472 bErrVltg4 "shutdown because of Over/Undervoltage at I/O side";
+CM_ SG_ 3221225472 Checksum_417 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_417 "Message counter signal for frame";
+CM_ SG_ 3221225472 ElectricMachineTemperature4 "Current temperature of electric machine";
+CM_ SG_ 3221225472 InverterTemperature4 "Current temperature of Inverter4";
+CM_ SG_ 3221225472 UT30Curr4 "Current UT30 Voltage at Inverter4";
+CM_ SG_ 3221225472 TempCurrRotor4 "Temperature of rotor";
+CM_ SG_ 3221225472 Checksum_626 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_626 "Message counter signal for frame";
+CM_ SG_ 3221225472 Mode4 "State4 DC/DC converter";
+CM_ SG_ 3221225472 CurrentLV4 "current on low voltage side";
+CM_ SG_ 3221225472 VoltageLV4 "voltage on low voltage side";
+CM_ SG_ 3221225472 DcCurrentHV4 "current of the DC/DC converter at high voltage side";
+CM_ SG_ 3221225472 VoltageHV4 "voltage at high voltage side";
+CM_ SG_ 3221225472 TempCurr4 " temperature of DCDC";
+CM_ SG_ 3221225472 Checksum_226 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_226 "Message counter signal for frame";
+CM_ SG_ 3221225472 dataInvrNr4 "Inverter number which has been configured via UDS/BODAS";
+CM_ SG_ 3221225472 MaxTorque4 "Electric machine torque value";
+CM_ SG_ 3221225472 MinTorque4 "Total brake torque minimum";
+CM_ SG_ 3221225472 Checksum_216 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_216 "Message counter signal for frame";
+CM_ SG_ 3221225472 TrqCurrWoDstC4 "e-machine torque without part of damping control";
+CM_ SG_ 3221225472 TempCurrCool4 "temperature of Inverter4 cooling water";
+CM_ SG_ 3221225472 CurrentHV4 "HV current at the DC/AC converter";
+CM_ SG_ 3221225472 OutputTorque4 "output torque which is currently provided by the electric machine";
+CM_ SG_ 3221225472 State4 "Information of the  State4 of the electric machine";
+CM_ SG_ 3221225472 Speed4 "rotational speed of electric machine";
+CM_ SG_ 3221225472 Checksum_20A "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_20A "Message counter signal for frame";
+CM_ SG_ 3221225472 dataInvrNr3 "Inverter number which has been configured via UDS/BODAS";
+CM_ SG_ 3221225472 MaxTorque3 "Electric machine torque value";
+CM_ SG_ 3221225472 MinTorque3 "Total brake torque minimum";
+CM_ SG_ 3221225472 Checksum_214 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_214 "Message counter signal for frame";
+CM_ SG_ 3221225472 TrqCurrWoDstC3 "e-machine torque without part of damping control";
+CM_ SG_ 3221225472 TempCurrCool3 "temperature of Inverter3 cooling water";
+CM_ SG_ 3221225472 Mode3 "State3 DC/DC converter";
+CM_ SG_ 3221225472 CurrentLV3 "current on low voltage side";
+CM_ SG_ 3221225472 VoltageLV3 "voltage on low voltage side";
+CM_ SG_ 3221225472 DcCurrentHV3 "current of the DC/DC converter at high voltage side";
+CM_ SG_ 3221225472 VoltageHV3 "voltage at high voltage side";
+CM_ SG_ 3221225472 TempCurr3 " temperature of DCDC";
+CM_ SG_ 3221225472 Checksum_224 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_224 "Message counter signal for frame";
+CM_ SG_ 3221225472 ElectricMachineTemperature3 "Current temperature of electric machine";
+CM_ SG_ 3221225472 InverterTemperature3 "Current temperature of Inverter3";
+CM_ SG_ 3221225472 UT30Curr3 "Current UT30 Voltage at Inverter3";
+CM_ SG_ 3221225472 TempCurrRotor3 "Temperature of rotor";
+CM_ SG_ 3221225472 Checksum_624 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_624 "Message counter signal for frame";
+CM_ SG_ 3221225472 DC_MaxCurrentLV3 "Maximal allowed current at low voltage side";
+CM_ SG_ 3221225472 DC_MaxCurrentHV3 "Maximal allowed current at high voltage side";
+CM_ SG_ 3221225472 bDernUndrUdcLV3 "Derating because of Low Voltage at LV";
+CM_ SG_ 3221225472 ErrShtOff3 "Derating because of DCDC shutdown";
+CM_ SG_ 3221225472 bDernOvrIdcLv3 "Derating because of high current at LV";
+CM_ SG_ 3221225472 bDernOvrIdcHV3 "Derating because of high current at HV";
+CM_ SG_ 3221225472 bDernOvrUdcLv3 "Derating because of error high voltage at LV";
+CM_ SG_ 3221225472 bDernUndrUdcHV3 "Derating because of error low voltage at HV";
+CM_ SG_ 3221225472 ErrLimitedPerformance3 "limited performance of DCDC";
+CM_ SG_ 3221225472 bDernTemp_DCDC3 "Derating because of overtemperature DCDC";
+CM_ SG_ 3221225472 bDernOvrUdcHV3 "Derating because of high voltage at HV";
+CM_ SG_ 3221225472 bErrVltg3 "shutdown because of Over/Undervoltage at I/O side";
+CM_ SG_ 3221225472 Checksum_415 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_415 "Message counter signal for frame";
+CM_ SG_ 3221225472 EmergencyShutoffRequest3 "Emergency shut off requested by inverter ECU";
+CM_ SG_ 3221225472 bDernOvrUdc3 "Derating because of overvoltage HV";
+CM_ SG_ 3221225472 bDernUndrUdc3 "Derating because of undervoltage HV";
+CM_ SG_ 3221225472 Checksum_404 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_404 "Message counter signal for frame";
+CM_ SG_ 3221225472 bDernOvrIdc3 "Derating because of overcurrent Inverter3 E-machine";
+CM_ SG_ 3221225472 bDernUndrIdc3 "Derating because of overcurrent regenerative Inverter3 E-machine";
+CM_ SG_ 3221225472 bDernTemp3 "Derating because of overtemperature E-machine";
+CM_ SG_ 3221225472 bDiagReq3 "Diag request for e-machine Inverter3 Calibration";
+CM_ SG_ 3221225472 bDernTrqMin3 "Derating because of max torque regenerative";
+CM_ SG_ 3221225472 bDernTrqMax3 "Derating because of max torque";
+CM_ SG_ 3221225472 bDstActv3 "Surge Damping active";
+CM_ SG_ 3221225472 bReadyHV3 "HV voltage operational";
+CM_ SG_ 3221225472 EmergencyShutoffRequest1 "Emergency shut off requested by inverter ECU";
+CM_ SG_ 3221225472 bDernOvrUdc1 "Derating because of overvoltage HV";
+CM_ SG_ 3221225472 bDernUndrUdc1 "Derating because of undervoltage HV";
+CM_ SG_ 3221225472 Checksum_400 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_400 "Message counter signal for frame";
+CM_ SG_ 3221225472 bDernOvrIdc1 "Derating because of overcurrent Inverter1 E-machine";
+CM_ SG_ 3221225472 bDernUndrIdc1 "Derating because of overcurrent regenerative Inverter1 E-machine";
+CM_ SG_ 3221225472 bDernTemp1 "Derating because of overtemperature E-machine";
+CM_ SG_ 3221225472 bDiagReq1 "Diag request for e-machine Inverter1 Calibration";
+CM_ SG_ 3221225472 bDernTrqMin1 "Derating because of max torque regenerative";
+CM_ SG_ 3221225472 bDernTrqMax1 "Derating because of max torque";
+CM_ SG_ 3221225472 bDstActv1 "Surge Damping active";
+CM_ SG_ 3221225472 bReadyHV1 "HV voltage operational";
+CM_ SG_ 3221225472 DC_MaxCurrentLV1 "Maximal allowed current at low voltage side";
+CM_ SG_ 3221225472 DC_MaxCurrentHV1 "Maximal allowed current at high voltage side";
+CM_ SG_ 3221225472 bDernUndrUdcLV1 "Derating because of Low Voltage at LV";
+CM_ SG_ 3221225472 ErrShtOff1 "Derating because of DCDC shutdown";
+CM_ SG_ 3221225472 bDernOvrIdcLv1 "Derating because of high current at LV";
+CM_ SG_ 3221225472 bDernOvrIdcHV1 "Derating because of high current at HV";
+CM_ SG_ 3221225472 bDernOvrUdcLv1 "Derating because of error high voltage at LV";
+CM_ SG_ 3221225472 bDernUndrUdcHV1 "Derating because of error low voltage at HV";
+CM_ SG_ 3221225472 ErrLimitedPerformance1 "limited performance of DCDC";
+CM_ SG_ 3221225472 bDernTemp_DCDC1 "Derating because of overtemperature DCDC";
+CM_ SG_ 3221225472 bDernOvrUdcHV1 "Derating because of high voltage at HV";
+CM_ SG_ 3221225472 bErrVltg1 "shutdown because of Over/Undervoltage at I/O side";
+CM_ SG_ 3221225472 Checksum_411 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_411 "Message counter signal for frame";
+CM_ SG_ 3221225472 ElectricMachineTemperature1 "Current temperature of electric machine";
+CM_ SG_ 3221225472 InverterTemperature1 "Current temperature of Inverter1";
+CM_ SG_ 3221225472 UT30Curr1 "Current UT30 Voltage at Inverter1";
+CM_ SG_ 3221225472 TempCurrRotor1 "Temperature of rotor";
+CM_ SG_ 3221225472 Checksum_620 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_620 "Message counter signal for frame";
+CM_ SG_ 3221225472 CurrentHV1 "HV current at the DC/AC converter";
+CM_ SG_ 3221225472 OutputTorque1 "output torque which is currently provided by the electric machine";
+CM_ SG_ 3221225472 State1 "Information of the  State1 of the electric machine";
+CM_ SG_ 3221225472 Speed1 "rotational speed of electric machine";
+CM_ SG_ 3221225472 Checksum_204 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_204 "Message counter signal for frame";
+CM_ SG_ 3221225472 dataInvrNr1 "Inverter number which has been configured via UDS/BODAS";
+CM_ SG_ 3221225472 MaxTorque1 "Electric machine torque value";
+CM_ SG_ 3221225472 MinTorque1 "Total brake torque minimum";
+CM_ SG_ 3221225472 Checksum_210 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_210 "Message counter signal for frame";
+CM_ SG_ 3221225472 TrqCurrWoDstC1 "e-machine torque without part of damping control";
+CM_ SG_ 3221225472 TempCurrCool1 "temperature of Inverter1 cooling water";
+CM_ SG_ 3221225472 Mode1 "State1 DC/DC converter";
+CM_ SG_ 3221225472 CurrentLV1 "current on low voltage side";
+CM_ SG_ 3221225472 VoltageLV1 "voltage on low voltage side";
+CM_ SG_ 3221225472 DcCurrentHV1 "current of the DC/DC converter at high voltage side";
+CM_ SG_ 3221225472 VoltageHV1 "voltage at high voltage side";
+CM_ SG_ 3221225472 TempCurr1 " temperature of DCDC";
+CM_ SG_ 3221225472 Checksum_220 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_220 "Message counter signal for frame";
+CM_ SG_ 3221225472 INV4_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV4_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV4_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV4_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV3_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV3_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV3_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 INV3_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 3221225472 SurgeDamperTreshold5 "Threshold torque for damping control";
+CM_ SG_ 3221225472 SurgeDamperState5 "Requested surge damper state";
+CM_ SG_ 3221225472 SurgeDamperMaxTorque5 "Maximum torque active damping control";
+CM_ SG_ 3221225472 SurgeDamperFactor5 "Calculation factor for surge damper";
+CM_ SG_ 3221225472 SurgeDamperTreshold4 "Threshold torque for damping control";
+CM_ SG_ 3221225472 SurgeDamperState4 "Requested surge damper state";
+CM_ SG_ 3221225472 SurgeDamperMaxTorque4 "Maximum torque active damping control";
+CM_ SG_ 3221225472 SurgeDamperFactor4 "Calculation factor for surge damper";
+CM_ SG_ 3221225472 SurgeDamperTreshold3 "Threshold torque for damping control";
+CM_ SG_ 3221225472 SurgeDamperState3 "Requested surge damper state";
+CM_ SG_ 3221225472 SurgeDamperMaxTorque3 "Maximum torque active damping control";
+CM_ SG_ 3221225472 SurgeDamperFactor3 "Calculation factor for surge damper";
+CM_ SG_ 3221225472 SurgeDamperTreshold1 "Threshold torque for damping control";
+CM_ SG_ 3221225472 SurgeDamperState1 "Requested surge damper state";
+CM_ SG_ 3221225472 SurgeDamperMaxTorque1 "Maximum torque active damping control";
+CM_ SG_ 3221225472 SurgeDamperFactor1 "Calculation factor for surge damper";
+CM_ SG_ 3221225472 Checksum_315 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_315 "Message counter signal for frame";
+CM_ SG_ 3221225472 MaxTorqueEngineSpeed5 "Maximum allowed torque for speed controller";
+CM_ SG_ 3221225472 MinTorqueEngineSpeed5 "Minimum allowed torque for speed controller";
+CM_ SG_ 3221225472 MaxDeltaSpeed5 "Maximum allowed speed difference";
+CM_ SG_ 3221225472 FactorPContributionSmall5 "Factor to scale contributon P Controller, small signal gain";
+CM_ SG_ 3221225472 FactorPContributionLarge5 "Factor to scale contributon P Controller, large signal gain";
+CM_ SG_ 3221225472 Checksum_311 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_311 "Message counter signal for frame";
+CM_ SG_ 3221225472 MaxTorqueEngineSpeed4 "Maximum allowed torque for speed controller";
+CM_ SG_ 3221225472 MinTorqueEngineSpeed4 "Minimum allowed torque for speed controller";
+CM_ SG_ 3221225472 MaxDeltaSpeed4 "Maximum allowed speed difference";
+CM_ SG_ 3221225472 FactorPContributionSmall4 "Factor to scale contributon P Controller, small signal gain";
+CM_ SG_ 3221225472 FactorPContributionLarge4 "Factor to scale contributon P Controller, large signal gain";
+CM_ SG_ 3221225472 Checksum_30D "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_30D "Message counter signal for frame";
+CM_ SG_ 3221225472 MaxTorqueEngineSpeed3 "Maximum allowed torque for speed controller";
+CM_ SG_ 3221225472 MinTorqueEngineSpeed3 "Minimum allowed torque for speed controller";
+CM_ SG_ 3221225472 MaxDeltaSpeed3 "Maximum allowed speed difference";
+CM_ SG_ 3221225472 FactorPContributionSmall3 "Factor to scale contributon P Controller, small signal gain";
+CM_ SG_ 3221225472 FactorPContributionLarge3 "Factor to scale contributon P Controller, large signal gain";
+CM_ SG_ 3221225472 Checksum_305 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_305 "Message counter signal for frame";
+CM_ SG_ 3221225472 MaxTorqueEngineSpeed1 "Maximum allowed torque for speed controller";
+CM_ SG_ 3221225472 MinTorqueEngineSpeed1 "Minimum allowed torque for speed controller";
+CM_ SG_ 3221225472 MaxDeltaSpeed1 "Maximum allowed speed difference";
+CM_ SG_ 3221225472 FactorPContributionSmall1 "Factor to scale contributon P Controller, small signal gain";
+CM_ SG_ 3221225472 FactorPContributionLarge1 "Factor to scale contributon P Controller, large signal gain";
+CM_ SG_ 3221225472 RequestedState1 "Request to the electric machine";
+CM_ SG_ 3221225472 DesiredSpeed1 "Desired speed electric machine";
+CM_ SG_ 3221225472 DesiredTorque1 "Desired torque electric machine";
+CM_ SG_ 3221225472 UdcSetP1 "Setpoint voltage E-Machine";
+CM_ SG_ 3221225472 Checksum_104 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_104 "Message counter signal for frame";
+CM_ SG_ 3221225472 StHvbMaiRly1 "State1 of main relay, alternative signal to ContactorState";
+CM_ SG_ 3221225472 MessageCounter_130 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_130 "Checksum signal for frame";
+CM_ SG_ 3221225472 VoltageDemandLV1 "Desired voltage of the DCDC converter LV side";
+CM_ SG_ 3221225472 VoltageDemandHV1 "Desired voltage of the DCDC converter HV side";
+CM_ SG_ 3221225472 ModeRequest1 "Requested State1 of the DCDC converter";
+CM_ SG_ 3221225472 CurrentDemandLV1 "Demanded current on LV side";
+CM_ SG_ 3221225472 CurrentDemandHV1 "Demanded current of DCDC converter HV side";
+CM_ SG_ 3221225472 UdcMin1 "min voltage HV";
+CM_ SG_ 3221225472 UdcMax1 "max voltage HV";
+CM_ SG_ 3221225472 IdcMin1 "max current for regenerative current";
+CM_ SG_ 3221225472 IdcMax1 "max current for motor torque";
+CM_ SG_ 3221225472 MessageCounter_304 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_304 "Checksum signal for frame";
+CM_ SG_ 3221225472 flgInvrCanActvnCmd1 "Activates CAN activity of inverter1";
+CM_ SG_ 3221225472 KI_Faktor1 "Integral gain Ki";
+CM_ SG_ 3221225472 MessageCounter_306 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_306 "Checksum signal for frame";
+CM_ SG_ 3221225472 MinTorqueLimit1 "Lower limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueLimit1 "Upper limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueGradient1 "Maximum change rate of the torque demand";
+CM_ SG_ 3221225472 RequestedState3 "Request to the electric machine";
+CM_ SG_ 3221225472 DesiredSpeed3 "Desired speed electric machine";
+CM_ SG_ 3221225472 DesiredTorque3 "Desired torque electric machine";
+CM_ SG_ 3221225472 UdcSetP3 "Setpoint voltage E-Machine";
+CM_ SG_ 3221225472 Checksum_108 "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_108 "Message counter signal for frame";
+CM_ SG_ 3221225472 StHvbMaiRly3 "State3 of main relay, alternative signal to ContactorState";
+CM_ SG_ 3221225472 MessageCounter_134 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_134 "Checksum signal for frame";
+CM_ SG_ 3221225472 VoltageDemandLV3 "Desired voltage of the DCDC converter LV side";
+CM_ SG_ 3221225472 VoltageDemandHV3 "Desired voltage of the DCDC converter HV side";
+CM_ SG_ 3221225472 ModeRequest3 "Requested State3 of the DCDC converter";
+CM_ SG_ 3221225472 CurrentDemandLV3 "Demanded current on LV side";
+CM_ SG_ 3221225472 CurrentDemandHV3 "Demanded current of DCDC converter HV side";
+CM_ SG_ 3221225472 UdcMin3 "min voltage HV";
+CM_ SG_ 3221225472 UdcMax3 "max voltage HV";
+CM_ SG_ 3221225472 IdcMin3 "max current for regenerative current";
+CM_ SG_ 3221225472 IdcMax3 "max current for motor torque";
+CM_ SG_ 3221225472 MessageCounter_30C "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_30C "Checksum signal for frame";
+CM_ SG_ 3221225472 flgInvrCanActvnCmd3 "Activates CAN activity of inverter3";
+CM_ SG_ 3221225472 KI_Faktor3 "Integral gain Ki";
+CM_ SG_ 3221225472 MessageCounter_30E "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_30E "Checksum signal for frame";
+CM_ SG_ 3221225472 MinTorqueLimit3 "Lower limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueLimit3 "Upper limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueGradient3 "Maximum change rate of the torque demand";
+CM_ SG_ 3221225472 RequestedState4 "Request to the electric machine";
+CM_ SG_ 3221225472 DesiredSpeed4 "Desired speed electric machine";
+CM_ SG_ 3221225472 DesiredTorque4 "Desired torque electric machine";
+CM_ SG_ 3221225472 UdcSetP4 "Setpoint voltage E-Machine";
+CM_ SG_ 3221225472 Checksum_10A "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_10A "Message counter signal for frame";
+CM_ SG_ 3221225472 StHvbMaiRly4 "State4 of main relay, alternative signal to ContactorState";
+CM_ SG_ 3221225472 MessageCounter_136 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_136 "Checksum signal for frame";
+CM_ SG_ 3221225472 VoltageDemandLV4 "Desired voltage of the DCDC converter LV side";
+CM_ SG_ 3221225472 VoltageDemandHV4 "Desired voltage of the DCDC converter HV side";
+CM_ SG_ 3221225472 ModeRequest4 "Requested State4 of the DCDC converter";
+CM_ SG_ 3221225472 CurrentDemandLV4 "Demanded current on LV side";
+CM_ SG_ 3221225472 CurrentDemandHV4 "Demanded current of DCDC converter HV side";
+CM_ SG_ 3221225472 UdcMin4 "min voltage HV";
+CM_ SG_ 3221225472 UdcMax4 "max voltage HV";
+CM_ SG_ 3221225472 IdcMin4 "max current for regenerative current";
+CM_ SG_ 3221225472 IdcMax4 "max current for motor torque";
+CM_ SG_ 3221225472 MessageCounter_310 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_310 "Checksum signal for frame";
+CM_ SG_ 3221225472 flgInvrCanActvnCmd4 "Activates CAN activity of inverter4";
+CM_ SG_ 3221225472 KI_Faktor4 "Integral gain Ki";
+CM_ SG_ 3221225472 MessageCounter_312 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_312 "Checksum signal for frame";
+CM_ SG_ 3221225472 MinTorqueLimit4 "Lower limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueLimit4 "Upper limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueGradient4 "Maximum change rate of the torque demand";
+CM_ SG_ 3221225472 RequestedState5 "Request to the electric machine";
+CM_ SG_ 3221225472 DesiredSpeed5 "Desired speed electric machine";
+CM_ SG_ 3221225472 DesiredTorque5 "Desired torque electric machine";
+CM_ SG_ 3221225472 UdcSetP5 "Setpoint voltage E-Machine";
+CM_ SG_ 3221225472 Checksum_10C "Checksum signal for frame";
+CM_ SG_ 3221225472 MessageCounter_10C "Message counter signal for frame";
+CM_ SG_ 3221225472 StHvbMaiRly5 "State5 of main relay, alternative signal to ContactorState";
+CM_ SG_ 3221225472 MessageCounter_138 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_138 "Checksum signal for frame";
+CM_ SG_ 3221225472 VoltageDemandLV5 "Desired voltage of the DCDC converter LV side";
+CM_ SG_ 3221225472 VoltageDemandHV5 "Desired voltage of the DCDC converter HV side";
+CM_ SG_ 3221225472 ModeRequest5 "Requested State5 of the DCDC converter";
+CM_ SG_ 3221225472 CurrentDemandLV5 "Demanded current on LV side";
+CM_ SG_ 3221225472 CurrentDemandHV5 "Demanded current of DCDC converter HV side";
+CM_ SG_ 3221225472 UdcMin5 "min voltage HV";
+CM_ SG_ 3221225472 UdcMax5 "max voltage HV";
+CM_ SG_ 3221225472 IdcMin5 "max current for regenerative current";
+CM_ SG_ 3221225472 IdcMax5 "max current for motor torque";
+CM_ SG_ 3221225472 MessageCounter_314 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_314 "Checksum signal for frame";
+CM_ SG_ 3221225472 flgInvrCanActvnCmd5 "Activates CAN activity of inverter5";
+CM_ SG_ 3221225472 KI_Faktor5 "Integral gain Ki";
+CM_ SG_ 3221225472 MessageCounter_316 "Message counter signal for frame";
+CM_ SG_ 3221225472 Checksum_316 "Checksum signal for frame";
+CM_ SG_ 3221225472 MinTorqueLimit5 "Lower limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueLimit5 "Upper limit output torque of electric machine";
+CM_ SG_ 3221225472 MaxTorqueGradient5 "Maximum change rate of the torque demand";
+CM_ SG_ 3221225472 VCU_Gas_LV_CMD "Percentage of the maximum torque";
+CM_ SG_ 3221225472 VCU_Dir_LV_CMD "Set the direction of rotation";
+CM_ SG_ 3221225472 VCU_System_State_request "System state request.";
+CM_ SG_ 3221225472 VCU_relai_BAT_P "state";
+CM_ SG_ 3221225472 VCU_relai_BAT_N "state";
+CM_ SG_ 3221225472 VCU_relai_CHARGER_P "state";
+CM_ SG_ 3221225472 VCU_relai_CHARGER_N "state";
+CM_ SG_ 3221225472 VCU_relai_DCDC_P "state";
+CM_ SG_ 3221225472 VCU_relai_DCDC_N "state";
+CM_ SG_ 3221225472 VCU_APP_LVL0_STATE "see source code";
+CM_ SG_ 3221225472 VCU_APP_LVL1_STATE "see source code";
+CM_ SG_ 3221225472 VCU_APP_LVL2_STATE "see source code";
+CM_ SG_ 3221225472 VCU_APP_LVL3_STATE "see source code";
+CM_ SG_ 3221225472 VCU_VAL_MOT_STATE "VAL_MOT button state";
+CM_ SG_ 3221225472 VCU_General_Error "General Error Flag";
+CM_ SG_ 827 BMS_dischargePowerPred_BMS "Short term prediction for available discharge power.";
+CM_ SG_ 827 BMS_regenPowerPred_BMS "Short term prediction for available regeneration power.";
+CM_ SG_ 827 BMS_dischargeCurrentPred_BMS "Short term prediction for available discharge current.";
+CM_ SG_ 827 BMS_regenCurrentPred_BMS "Short term prediction for available regeneration current.";
+CM_ SG_ 826 BMS_fluidPressureInlet_BMS "Maximum measured cooling fluid inlet pressure of all strings.";
+CM_ SG_ 826 BMS_userSOC_BMS "Maximum SOC of all strings.";
+CM_ SG_ 826 BMS_fluidTemperatureOutlet_BMS "Minimum outlet fluid temperature of all strings.";
+CM_ SG_ 826 BMS_fluidTemperatureInlet_BMS "Minimum inlet fluid temperature of all strings.";
+CM_ SG_ 825 BMS_linkVoltageAuxiliary2_BMS "DC link voltage.";
+CM_ SG_ 825 BMS_linkVoltageAuxiliary1_BMS "DC link voltage.";
+CM_ SG_ 825 BMS_maxStringVoltage_BMS "Maximum string voltage of all strings.";
+CM_ SG_ 825 BMS_minStringVoltage_BMS "Minimum string voltage of all strings.";
+CM_ SG_ 823 BMS_maxDewPointTemperature_BMS "Maximum dew point temperature of all strings";
+CM_ SG_ 823 BMS_minModuleTemperatureIdx_BMS "Minimum module temperature index of all strings.";
+CM_ SG_ 823 BMS_maxModuleTemperatureIdx_BMS "Maximum module termperature index of all strings.";
+CM_ SG_ 823 BMS_maxModuleTemperature_BMS "Maximum module temperature of all strings.";
+CM_ SG_ 823 BMS_minModuleTemperature_BMS "Minimum module temperature of all strings.";
+CM_ SG_ 31 BMS_linkVoltage_SC01 "DC link voltage.";
+CM_ SG_ 31 BMS_emergencyRequest_SC01 "Emergency request to shut down all components of the DC bus.";
+CM_ SG_ 31 BMS_alive_SC01 "Alive counter.";
+CM_ SG_ 31 BMS_CRC_SC01 "Cyclic redundancy check.";
+CM_ SG_ 819 BMS_chargeVoltageLimit_BMS "DC voltage limit for charging.";
+CM_ SG_ 819 BMS_chargeCurrentSetpoint_BMS "DC charge current command. Output of charge control loop.";
+CM_ SG_ 822 BMS_maxSOC_BMS "Maximum SOC of all strings.";
+CM_ SG_ 822 BMS_minSOC_BMS "Minimum SOC of all strings.";
+CM_ SG_ 822 BMS_isolationResistanceInt_BMS "Minimum isolation resistance of all strings.";
+CM_ SG_ 822 BMS_isolationResistanceExt_BMS "Isolation resistance of the overall system.";
+CM_ SG_ 820 BMS_maxSOH_BMS "Maximum SOH of all strings.";
+CM_ SG_ 820 BMS_minSOH_BMS "Minimum SOH of all strings.";
+CM_ SG_ 820 BMS_energyAvailable_BMS "Energy available of all strings.";
+CM_ SG_ 821 BMS_maxBrickVoltageIndex_BMS "Maximum brick voltage index of all strings.";
+CM_ SG_ 821 BMS_minBrickVoltageIndex_BMS "Minimum brick voltage index of all strings.";
+CM_ SG_ 821 BMS_maxBrickVoltage_BMS "Maximum brick voltage of all strings.";
+CM_ SG_ 821 BMS_minBrickVoltage_BMS "Minimum brick voltage of all strings.";
+CM_ SG_ 818 BMS_dischargeCurrentLimit_BMS "Current limit for discharging of all strings. This is a positive value.";
+CM_ SG_ 818 BMS_regenCurrentLimit_BMS "Current limit for regenerating of all strings.";
+CM_ SG_ 818 BMS_minVoltageLimit_BMS "Minimum string voltage limit of all strings.";
+CM_ SG_ 818 BMS_maxVoltageLimit_BMS "Maximum string voltage limit of all strings.";
+CM_ SG_ 282 BMS_stateTRIndex_BMS "ID of first battery detecting a thermal runaway.";
+CM_ SG_ 282 BMS_cntrStateAux4_BMS "Auxiliary contactor state.";
+CM_ SG_ 282 BMS_cntrStateAux3_BMS "Auxiliary contactor state.";
+CM_ SG_ 282 BMS_cntrStateAux2_BMS "Auxiliary contactor state.";
+CM_ SG_ 282 BMS_cntrStateAux1_BMS "Auxiliary contactor state.";
+CM_ SG_ 282 BMS_hvilState_BMS "The state of the external/system isolation monitoring. The signal isolationState_BMS shall be set to 0x1 - ISOLATION_ACTIVE, if at least one pack has contactors close and performs isolation testing.";
+CM_ SG_ 282 BMS_isolationError_BMS "The state of the external/system isolation monitoring. The signal isolationState_BMS shall be set to 0x1 - ISOLATION_ACTIVE, if at least one pack has contactors close and performs isolation testing.";
+CM_ SG_ 282 BMS_isolationState_BMS "The state of the external/system isolation monitoring. The signal isolationState_BMS shall be set to 0x1 - ISOLATION_ACTIVE, if at least one pack has contactors close and performs isolation testing.";
+CM_ SG_ 282 BMS_chargeState_BMS "Charge state.";
+CM_ SG_ 282 BMS_state_BMS "BMS state.";
+CM_ SG_ 282 BMS_numberOfConnectedStrings_BMS "Number of connected strings.";
+CM_ SG_ 817 BMS_regenCurrentResidual_BMS "Minimum difference of regen current limit and string current of all strings.
+Positive indicating available regen current. Negative value indicating regen current limit violation.";
+CM_ SG_ 817 BMS_dischargeCurrentResidual_BMS "Minimum difference of discharge current limit and string current of all strings.
+Positive indicating available discharge current. Negative value indicating discharge current limit violation.";
+CM_ SG_ 817 BMS_current_BMS "Current of all strings (positive=discharge, negative=charge).";
+CM_ SG_ 817 BMS_linkVoltage_BMS "DC link voltage.";
+CM_ SG_ 283 BMS_cntrRequestAux4_PT "Auxiliary contactor state request.";
+CM_ SG_ 283 BMS_cntrRequestAux3_PT "Auxiliary contactor state request.";
+CM_ SG_ 283 BMS_cntrRequestAux2_PT "Auxiliary contactor state request.";
+CM_ SG_ 283 BMS_cntrRequestAux1_PT "Auxiliary contactor state request.";
+CM_ SG_ 283 BMS_rangeRequest_PT "Range request to command the BMS for different charge targets.";
+CM_ SG_ 283 BMS_CRC_PT "Cyclic redundancy check.";
+CM_ SG_ 283 BMS_alive_PT "Alive counter.";
+CM_ SG_ 283 BMS_chargePowerAvailable_PT "Available power for charging.";
+CM_ SG_ 283 BMS_sleepRequest_PT "Sleep request to command the BMS to go to sleep mode.
+Sleep mode can only be entered if key signal is low and no messages on PTCAN present.";
+CM_ SG_ 283 BMS_stateRequest_PT "BMS state request.";
+CM_ SG_ 283 BMS_isolationRequest_PT "Optional disabling of isolation monitoring.";
+CM_ SG_ 289 INV_SurgeDamperTreshold2 "Threshold torque for damping control";
+CM_ SG_ 289 INV_SurgeDamperState2 "Requested surge damper state";
+CM_ SG_ 289 INV_SurgeDamperMaxTorque2 "Maximum torque active damping control";
+CM_ SG_ 289 INV_SurgeDamperFactor2 "Calculation factor for surge damper";
+CM_ SG_ 1663 INV0_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1663 INV0_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1663 INV0_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1663 INV0_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1665 INV2_FailCode4 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1665 INV2_FailCode3 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1665 INV2_FailCode2 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 1665 INV2_FailCode1 "# bit0,1:
+00 => fault since last clear
+01 => fault active
+10, 11 => not used at the moment
+# bit2-13: FaultCode-ID, as by DFES_DTCM
+# bit14,15:
+00 => fault-id contains a DTC
+01 => fault-id contains DFC-id
+10,11 => not used at the moment";
+CM_ SG_ 777 INV_Checksum_309 "Checksum signal for frame";
+CM_ SG_ 777 INV_MessageCounter_309 "Message counter signal for frame";
+CM_ SG_ 777 INV_MaxTorqueEngineSpeed2 "Maximum allowed torque for speed controller";
+CM_ SG_ 777 INV_MinTorqueEngineSpeed2 "Minimum allowed torque for speed controller";
+CM_ SG_ 777 INV_MaxDeltaSpeed2 "Maximum allowed speed difference";
+CM_ SG_ 777 INV_FactorPContributionSmall2 "Factor to scale contributon P Controller, small signal gain";
+CM_ SG_ 777 INV_FactorPContributionLarge2 "Factor to scale contributon P Controller, large signal gain";
+CM_ SG_ 110 INV_bErrEmergencyDischargeReq "Bit-Info for emergency discharge request";
+CM_ SG_ 110 INV_MessageCounter_6E "Message counter signal for frame";
+CM_ SG_ 110 INV_Checksum_6E "Checksum signal for frame";
+CM_ SG_ 110 INV_ContactorState "State of the HV contactors";
+CM_ SG_ 110 INV_Current "battery current charging / discharging";
+CM_ SG_ 110 INV_Voltage "voltage of the electric energy storage";
+CM_ SG_ 262 INV_RequestedState2 "Request to the electric machine";
+CM_ SG_ 262 INV_DesiredSpeed2 "Desired speed electric machine";
+CM_ SG_ 262 INV_DesiredTorque2 "Desired torque electric machine";
+CM_ SG_ 262 INV_UdcSetP2 "Setpoint voltage E-Machine";
+CM_ SG_ 262 INV_Checksum_106 "Checksum signal for frame";
+CM_ SG_ 262 INV_MessageCounter_106 "Message counter signal for frame";
+CM_ SG_ 262 INV_StHvbMaiRly2 "State2 of main relay, alternative signal to ContactorState";
+CM_ SG_ 306 INV_MessageCounter_132 "Message counter signal for frame";
+CM_ SG_ 306 INV_Checksum_132 "Checksum signal for frame";
+CM_ SG_ 306 INV_VoltageDemandLV2 "Desired voltage of the DCDC converter LV side";
+CM_ SG_ 306 INV_VoltageDemandHV2 "Desired voltage of the DCDC converter HV side";
+CM_ SG_ 306 INV_ModeRequest2 "Requested State2 of the DCDC converter";
+CM_ SG_ 306 INV_CurrentDemandLV2 "Demanded current on LV side";
+CM_ SG_ 306 INV_CurrentDemandHV2 "Demanded current of DCDC converter HV side";
+CM_ SG_ 776 INV_UdcMin2 "min voltage HV";
+CM_ SG_ 776 INV_UdcMax2 "max voltage HV";
+CM_ SG_ 776 INV_IdcMin2 "max current for regenerative current";
+CM_ SG_ 776 INV_IdcMax2 "max current for motor torque";
+CM_ SG_ 776 INV_MessageCounter_308 "Message counter signal for frame";
+CM_ SG_ 776 INV_Checksum_308 "Checksum signal for frame";
+CM_ SG_ 776 INV_flgInvrCanActvnCmd2 "Activates CAN activity of inverter2";
+CM_ SG_ 778 INV_KI_Faktor2 "Integral gain Ki";
+CM_ SG_ 778 INV_MessageCounter_30A "Message counter signal for frame";
+CM_ SG_ 778 INV_Checksum_30A "Checksum signal for frame";
+CM_ SG_ 778 INV_MinTorqueLimit2 "Lower limit output torque of electric machine";
+CM_ SG_ 778 INV_MaxTorqueLimit2 "Upper limit output torque of electric machine";
+CM_ SG_ 778 INV_MaxTorqueGradient2 "Maximum change rate of the torque demand";
+CM_ SG_ 518 INV_CurrentHV2 "HV current at the DC/AC converter";
+CM_ SG_ 518 INV_OutputTorque2 "output torque which is currently provided by the electric machine";
+CM_ SG_ 518 INV_State2 "Information of the  State2 of the electric machine";
+CM_ SG_ 518 INV_Speed2 "rotational speed of electric machine";
+CM_ SG_ 518 INV_Checksum_206 "Checksum signal for frame";
+CM_ SG_ 518 INV_MessageCounter_206 "Message counter signal for frame";
+CM_ SG_ 530 INV_dataInvrNr2 "Inverter number which has been configured via UDS/BODAS";
+CM_ SG_ 530 INV_MaxTorque2 "Electric machine torque value";
+CM_ SG_ 530 INV_MinTorque2 "Total brake torque minimum";
+CM_ SG_ 530 INV_Checksum_212 "Checksum signal for frame";
+CM_ SG_ 530 INV_MessageCounter_212 "Message counter signal for frame";
+CM_ SG_ 530 INV_TrqCurrWoDstC2 "e-machine torque without part of damping control";
+CM_ SG_ 530 INV_TempCurrCool2 "temperature of Inverter2 cooling water";
+CM_ SG_ 546 INV_Mode2 "State2 DC/DC converter";
+CM_ SG_ 546 INV_CurrentLV2 "current on low voltage side";
+CM_ SG_ 546 INV_VoltageLV2 "voltage on low voltage side";
+CM_ SG_ 546 INV_DcCurrentHV2 "current of the DC/DC converter at high voltage side";
+CM_ SG_ 546 INV_VoltageHV2 "voltage at high voltage side";
+CM_ SG_ 546 INV_TempCurr2 " temperature of DCDC";
+CM_ SG_ 546 INV_Checksum_222 "Checksum signal for frame";
+CM_ SG_ 546 INV_MessageCounter_222 "Message counter signal for frame";
+CM_ SG_ 1570 INV_ElectricMachineTemperature2 "Current temperature of electric machine";
+CM_ SG_ 1570 INV_InverterTemperature2 "Current temperature of Inverter2";
+CM_ SG_ 1570 INV_UT30Curr2 "Current UT30 Voltage at Inverter2";
+CM_ SG_ 1570 INV_TempCurrRotor2 "Temperature of rotor";
+CM_ SG_ 1570 INV_Checksum_622 "Checksum signal for frame";
+CM_ SG_ 1570 INV_MessageCounter_622 "Message counter signal for frame";
+CM_ SG_ 1043 INV_DC_MaxCurrentLV2 "Maximal allowed current at low voltage side";
+CM_ SG_ 1043 INV_DC_MaxCurrentHV2 "Maximal allowed current at high voltage side";
+CM_ SG_ 1043 INV_bDernUndrUdcLV2 "Derating because of Low Voltage at LV";
+CM_ SG_ 1043 INV_ErrShtOff2 "Derating because of DCDC shutdown";
+CM_ SG_ 1043 INV_bDernOvrIdcLv2 "Derating because of high current at LV";
+CM_ SG_ 1043 INV_bDernOvrIdcHV2 "Derating because of high current at HV";
+CM_ SG_ 1043 INV_bDernOvrUdcLv2 "Derating because of error high voltage at LV";
+CM_ SG_ 1043 INV_bDernUndrUdcHV2 "Derating because of error low voltage at HV";
+CM_ SG_ 1043 INV_ErrLimitedPerformance2 "limited performance of DCDC";
+CM_ SG_ 1043 INV_bDernTemp_DCDC2 "Derating because of overtemperature DCDC";
+CM_ SG_ 1043 INV_bDernOvrUdcHV2 "Derating because of high voltage at HV";
+CM_ SG_ 1043 INV_bErrVltg2 "shutdown because of Over/Undervoltage at I/O side";
+CM_ SG_ 1043 INV_Checksum_413 "Checksum signal for frame";
+CM_ SG_ 1043 INV_MessageCounter_413 "Message counter signal for frame";
+CM_ SG_ 1026 INV_EmergencyShutoffRequest2 "Emergency shut off requested by inverter ECU";
+CM_ SG_ 1026 INV_bDernOvrUdc2 "Derating because of overvoltage HV";
+CM_ SG_ 1026 INV_bDernUndrUdc2 "Derating because of undervoltage HV";
+CM_ SG_ 1026 INV_Checksum_402 "Checksum signal for frame";
+CM_ SG_ 1026 INV_MessageCounter_402 "Message counter signal for frame";
+CM_ SG_ 1026 INV_bDernOvrIdc2 "Derating because of overcurrent Inverter2 E-machine";
+CM_ SG_ 1026 INV_bDernUndrIdc2 "Derating because of overcurrent regenerative Inverter2 E-machine";
+CM_ SG_ 1026 INV_bDernTemp2 "Derating because of overtemperature E-machine";
+CM_ SG_ 1026 INV_bDiagReq2 "Diag request for e-machine Inverter2 Calibration";
+CM_ SG_ 1026 INV_bDernTrqMin2 "Derating because of max torque regenerative";
+CM_ SG_ 1026 INV_bDernTrqMax2 "Derating because of max torque";
+CM_ SG_ 1026 INV_bDstActv2 "Surge Damping active";
+CM_ SG_ 1026 INV_bReadyHV2 "HV voltage operational";
+CM_ SG_ 1757 INV_DIAG_Downtime "Calculated Downtime of System (car sleep)";
+CM_ SG_ 1757 INV_DIAG_Downtime_state "state of downtime
+0 -> not valid/calculated
+1 -> valid";
+CM_ SG_ 1757 INV_DIAG_Second "Second";
+CM_ SG_ 1757 INV_DIAG_Minute "Minute";
+CM_ SG_ 1757 INV_DIAG_Hour "Hour";
+CM_ SG_ 1757 INV_DIAG_Day "Day";
+CM_ SG_ 1757 INV_DIAG_Month "Month";
+CM_ SG_ 1757 INV_DIAG_Year "year";
+CM_ SG_ 1757 INV_DIAG_Mileage "Mileage";
+CM_ SG_ 1849 NLG_TempCoolPlate "Actual temperatur cool plate";
+CM_ SG_ 1849 NLG_S_AcVoltDerating "NLG is derating  MAINS (AC Voltage)";
+CM_ SG_ 1849 NLG_S_AcDeratingNoisy "NLG is derating due to very noisy MAINS (AC Voltage)";
+CM_ SG_ 1849 NLG_AcPhaseUsd "AC input number of phases used";
+CM_ SG_ 1849 NLG_AcPhaseDet "AC input number of phases detected";
+CM_ SG_ 1849 NLG_StatusCP "Status Control pilot";
+CM_ SG_ 1849 NLG_StatusPP "Status Proximity";
+CM_ SG_ 1849 NLG_S_CP_X1 "Control pilot signal detected with 100%";
+CM_ SG_ 1849 NLG_S_CP_SCC "Control pilot signal detected with 5%";
+CM_ SG_ 1849 NLG_AcCurrMaxPP "Maximum AC current Proximity";
+CM_ SG_ 1849 NLG_AcCurrMaxCP "Maximum AC current Control Pilot";
+CM_ BO_ 1113 "Diagnose Response";
+CM_ BO_ 1105 "Diagnose Physical Request";
+CM_ BO_ 1089 "Diagnose Functional Request";
+CM_ BO_ 2600147972 "XCP Slave: Data Transmission Object";
+CM_ BO_ 2600147968 "XCP Master: Command Recieive Object";
+CM_ BO_ 1049 "NLG internal parameter transmit";
+CM_ SG_ 1049 NLG_PARAM_RP "NLG PARAM response";
+CM_ BO_ 1041 "NLG internal parameter receive";
+CM_ SG_ 1041 NLG_PARAM_RQ "NLG PARAM request";
+CM_ BO_ 1833 "Actual AC value";
+CM_ SG_ 1833 NLG_S_AcPhaseRot "AC phase rotation (CW / CCW)";
+CM_ SG_ 1833 NLG_AcPowTotAct "Actual AC power total";
+CM_ SG_ 1833 NLG_AcFreqAct "Actual AC frequency";
+CM_ SG_ 1833 NLG_AcVoltL3Act "Actual AC voltage L3 (reads zero during 1-phase operation)";
+CM_ SG_ 1833 NLG_AcVoltL2Act "Actual AC voltage L2 (reads zero during 1-phase operation)";
+CM_ SG_ 1833 NLG_AcVoltL1Act "Actual AC voltage L1";
+CM_ SG_ 1833 NLG_AcCurrL3Act "Actual AC current L3 (PRC value shown during 1-phase operation)";
+CM_ SG_ 1833 NLG_AcCurrL2Act "Actual AC current L2 (PRC value shown during 1-phase operation)";
+CM_ SG_ 1833 NLG_AcCurrL1Act "Actual AC current L1";
+CM_ BO_ 1832 "Actual limiter by CAN";
+CM_ SG_ 1832 NLG_AcCurrHwAvl "Available AC current";
+CM_ SG_ 1832 NLG_S_HwEnable "Indicates if hardware enabled";
+CM_ SG_ 1832 NLG_S_AcDet "AC input detected";
+CM_ SG_ 1832 NLG_S_ConLocked "Connector locked";
+CM_ SG_ 1832 NLG_S_CtrlPilotDet "Control pilot signal detected";
+CM_ SG_ 1832 NLG_S_ProximityDet "Valid Proximity signal detected";
+CM_ SG_ 1832 NLG_S_HwWakeup "Hardware wakup detected";
+CM_ SG_ 1832 NLG_StateAct "State On-Board Charger (see state machine)";
+CM_ SG_ 1832 NLG_StateCtrlPilot "State ControlPilot (see IEC 61851)";
+CM_ SG_ 1832 NLG_S_ProximityLim "Output power limited by proximity resistor value";
+CM_ SG_ 1832 NLG_S_IntTempLim "Output power limited by internal temperature";
+CM_ SG_ 1832 NLG_S_CtrlPilotLim "Output power limited by control pilot signal";
+CM_ SG_ 1832 NLG_S_ConTempLim "Output power limited by conenctor temperature";
+CM_ SG_ 1832 NLG_S_AcCurrLim "Output power limited by AC current";
+CM_ SG_ 1832 NLG_S_War "Warning condition on";
+CM_ SG_ 1832 NLG_S_Err "An error has been detected";
+CM_ SG_ 1832 NLG_S_DcHvVoltLim "Output power limited by output voltage";
+CM_ SG_ 1832 NLG_S_DcHvCurrLim "Output power limited by output current";
+CM_ SG_ 1832 NLG_AcCurrMaxAct "Maximum actual AC current (L1/L2/L3)";
+CM_ SG_ 1832 NLG_DcHvVoltAct "Actual HV battery output voltage";
+CM_ SG_ 1832 NLG_DcHvCurrAct "Actual HV battery output current";
+CM_ BO_ 1801 "Actual intern value";
+CM_ SG_ 1801 NLG_DcHvAhAct "Actual DC Ah";
+CM_ SG_ 1801 NLG_DcHvWhAct "Actual DC kWh";
+CM_ SG_ 1801 NLG_AcWhAct "Actual AC kWh";
+CM_ SG_ 1801 NLG_TempCon "Actual temperatur connector";
+CM_ SG_ 1801 NLG_MaxTempAct "Maximum actual internal temperature";
+CM_ BO_ 1945 "Actual error and warning";
+CM_ SG_ 1945 NLG_E_LatchFPGA "Error - Latch FPGA";
+CM_ SG_ 1945 NLG_E_Inernal "Error-  internal error";
+CM_ SG_ 1945 NLG_E_AcInterruption "Error-  AC Interruption";
+CM_ SG_ 1945 NLG_W_PRELOAD "Warning - to many preloaded";
+CM_ SG_ 1945 NLG_W_TempInt "Warning - power reduction due to internal temperature";
+CM_ SG_ 1945 NLG_E_TempCon "Error - Connector temperature";
+CM_ SG_ 1945 NLG_E_DcHvVoltRange "Error - HVDC voltage out of range";
+CM_ SG_ 1945 NLG_E_UZK "Error - DC voltage to low";
+CM_ SG_ 1945 NLG_E_TPON "Error - serial relay has not been switched";
+CM_ SG_ 1945 NLG_E_BURST "Error - output voltage to low";
+CM_ SG_ 1945 NLG_E_PRELOAD "Error - DC-Link (Mains!!) not preloaded";
+CM_ SG_ 1945 NLG_E_TempInt "Error-  internal temperature wrong";
+CM_ SG_ 1945 NLG_W_FPGA "Warning - FPGA shutdown";
+CM_ SG_ 1945 NLG_W_CanTimeout "Warning - some CAN messages lost";
+CM_ SG_ 1945 NLG_E_WrongFPGA "Error - wrong FPGA (doesn't match SW)";
+CM_ SG_ 1945 NLG_W_AcVoltage "Warning - AC voltage out of specs";
+CM_ SG_ 1945 NLG_W_AcFrequency "Warning - AC frequency out of specs";
+CM_ SG_ 1945 NLG_W_ConLocked "Warning - Connector not locked";
+CM_ SG_ 1945 NLG_E_OverTemp "Error - over temperature (charge coupler or internal)";
+CM_ SG_ 1945 NLG_W_PowRed "Warning - power reduction due to internal conditions";
+CM_ SG_ 1945 NLG_E_WrongHW "Error - wrong Hardware (doesn't match SW)";
+CM_ SG_ 1945 NLG_E_ConLocked "reserved";
+CM_ SG_ 1945 NLG_E_IntSupply "Error - intern supply fault";
+CM_ SG_ 1945 NLG_E_DcHvVoltRed "Error - HV voltage redundant value different from main value";
+CM_ SG_ 1945 NLG_E_HvIsoPos "reserved";
+CM_ SG_ 1945 NLG_E_HvIsoNeg "reserved";
+CM_ SG_ 1945 NLG_E_NVSRam "Error - NVSRAM check sum failure";
+CM_ SG_ 1945 NLG_E_FpgaInit "Error - FPGA Initialization";
+CM_ SG_ 1945 NLG_E_Flash "Error - Flash memory checksum failure";
+CM_ SG_ 1945 NLG_E_Interlock "reserved";
+CM_ SG_ 1945 NLG_E_Crash "Error - crash detected";
+CM_ SG_ 1945 NLG_E_CanValue "Error - Commanded value is out of specified range";
+CM_ SG_ 1945 NLG_E_CanMsgLost "Error - CAN timeout, no control message received";
+CM_ SG_ 1945 NLG_W_Watchdog "Warning - Internal Watchdog Timeout";
+CM_ SG_ 1945 NLG_W_CanTx "Warning - CAN transmit error counter > 127";
+CM_ SG_ 1945 NLG_W_CanRx "Warning - CAN receive error counter > 127";
+CM_ SG_ 1945 NLG_W_CanOff "Warning - CAN receive error counter > 127";
+CM_ SG_ 1945 NLG_E_OsTrap "Error - OS trap encountered";
+CM_ BO_ 1809 "Demand limiter by CAN";
+CM_ SG_ 1809 NLG_LedDem "Charge LED demanded";
+CM_ SG_ 1809 NLG_C_EnPhaseShift "AC power factor request";
+CM_ SG_ 1809 NLG_AcPhaseShift "AC phase shift ( cos(phase shift) = power factor ) (not implemented)";
+CM_ SG_ 1809 NLG_C_UnlockConRq "Unlock connector request";
+CM_ SG_ 1809 NLG_C_VentiRq "Control pilot ventilation request";
+CM_ SG_ 1809 NLG_StateDem "NLG state (see state machine)";
+CM_ SG_ 1809 NLG_C_ClrError "Clear error latch";
+CM_ SG_ 1809 NLG_AcCurrLimMax "Maximum AC current";
+CM_ SG_ 1809 NLG_DcHvCurrLimMax "Maximum HV current";
+CM_ SG_ 1809 NLG_DcHvVoltLimMax "Maximum HV voltage";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "BusType" "";
+BA_ "DBName" "PowertrainCAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "NLG6_VehicleCan";
+BA_ "GenMsgCycleTime" BO_ 827 100;
+BA_ "GenMsgCycleTime" BO_ 826 1000;
+BA_ "GenMsgCycleTime" BO_ 825 100;
+BA_ "GenMsgCycleTime" BO_ 823 100;
+BA_ "GenMsgCycleTime" BO_ 31 100;
+BA_ "GenMsgCycleTime" BO_ 819 100;
+BA_ "GenMsgCycleTime" BO_ 822 1000;
+BA_ "GenMsgCycleTime" BO_ 820 1000;
+BA_ "GenMsgCycleTime" BO_ 821 100;
+BA_ "GenMsgCycleTime" BO_ 818 10;
+BA_ "GenMsgCycleTime" BO_ 282 10;
+BA_ "GenMsgCycleTime" BO_ 817 10;
+BA_ "GenMsgCycleTime" BO_ 283 10;
+BA_ "GenMsgCycleTime" BO_ 289 100;
+BA_ "GenMsgSendType" BO_ 289 0;
+BA_ "GenMsgCycleTime" BO_ 1663 100;
+BA_ "GenMsgSendType" BO_ 1663 0;
+BA_ "GenMsgCycleTime" BO_ 1665 100;
+BA_ "GenMsgSendType" BO_ 1665 0;
+BA_ "GenMsgCycleTime" BO_ 777 100;
+BA_ "GenMsgSendType" BO_ 777 0;
+BA_ "GenMsgCycleTime" BO_ 110 10;
+BA_ "GenMsgSendType" BO_ 110 0;
+BA_ "GenMsgCycleTime" BO_ 262 10;
+BA_ "GenMsgSendType" BO_ 262 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgCycleTime" BO_ 776 10;
+BA_ "GenMsgSendType" BO_ 776 0;
+BA_ "GenMsgCycleTime" BO_ 778 100;
+BA_ "GenMsgSendType" BO_ 778 0;
+BA_ "GenMsgCycleTime" BO_ 518 10;
+BA_ "GenMsgSendType" BO_ 518 0;
+BA_ "GenMsgCycleTime" BO_ 530 10;
+BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 546 10;
+BA_ "GenMsgSendType" BO_ 546 0;
+BA_ "GenMsgCycleTime" BO_ 1570 100;
+BA_ "GenMsgSendType" BO_ 1570 0;
+BA_ "GenMsgCycleTime" BO_ 1043 100;
+BA_ "GenMsgSendType" BO_ 1043 0;
+BA_ "GenMsgCycleTime" BO_ 1026 100;
+BA_ "GenMsgSendType" BO_ 1026 0;
+BA_ "GenMsgCycleTime" BO_ 1757 1000;
+BA_ "GenMsgSendType" BO_ 1757 0;
+BA_ "GenMsgCycleTime" BO_ 1849 100;
+BA_ "GenMsgSendType" BO_ 1849 0;
+BA_ "GenMsgCycleTime" BO_ 1113 10;
+BA_ "GenMsgSendType" BO_ 1113 0;
+BA_ "GenMsgCycleTime" BO_ 1105 10;
+BA_ "GenMsgSendType" BO_ 1105 0;
+BA_ "GenMsgCycleTime" BO_ 1089 10;
+BA_ "GenMsgSendType" BO_ 1089 0;
+BA_ "GenMsgCycleTime" BO_ 2600147972 10;
+BA_ "GenMsgSendType" BO_ 2600147972 0;
+BA_ "GenMsgCycleTime" BO_ 2600147968 10;
+BA_ "GenMsgSendType" BO_ 2600147968 0;
+BA_ "GenMsgSendType" BO_ 1049 7;
+BA_ "GenMsgCycleTime" BO_ 1049 10;
+BA_ "GenMsgSendType" BO_ 1041 7;
+BA_ "GenMsgCycleTime" BO_ 1041 100;
+BA_ "GenMsgSendType" BO_ 1833 0;
+BA_ "GenMsgCycleTime" BO_ 1833 100;
+BA_ "GenMsgSendType" BO_ 1832 0;
+BA_ "GenMsgCycleTime" BO_ 1832 100;
+BA_ "GenMsgSendType" BO_ 1801 0;
+BA_ "GenMsgCycleTime" BO_ 1801 100;
+BA_ "GenMsgSendType" BO_ 1945 0;
+BA_ "GenMsgCycleTime" BO_ 1945 1000;
+BA_ "GenMsgSendType" BO_ 1809 0;
+BA_ "GenMsgCycleTime" BO_ 1809 100;
+VAL_ 827 BMS_dischargePowerPred_BMS 65535 "SNA" ;
+VAL_ 827 BMS_regenPowerPred_BMS 65535 "SNA" ;
+VAL_ 827 BMS_dischargeCurrentPred_BMS 65535 "SNA" ;
+VAL_ 827 BMS_regenCurrentPred_BMS 65535 "SNA" ;
+VAL_ 826 BMS_fluidPressureInlet_BMS 255 "SNA" ;
+VAL_ 826 BMS_userSOC_BMS 65535 "SNA" ;
+VAL_ 826 BMS_fluidTemperatureOutlet_BMS 255 "SNA" ;
+VAL_ 826 BMS_fluidTemperatureInlet_BMS 255 "SNA" ;
+VAL_ 825 BMS_linkVoltageAuxiliary2_BMS 65535 "SNA" ;
+VAL_ 825 BMS_linkVoltageAuxiliary1_BMS 65535 "SNA" ;
+VAL_ 825 BMS_maxStringVoltage_BMS 65535 "SNA" ;
+VAL_ 825 BMS_minStringVoltage_BMS 65535 "SNA" ;
+VAL_ 823 BMS_maxDewPointTemperature_BMS 255 "SNA" ;
+VAL_ 823 BMS_minModuleTemperatureIdx_BMS 65535 "SNA" ;
+VAL_ 823 BMS_maxModuleTemperatureIdx_BMS 65535 "SNA" ;
+VAL_ 823 BMS_maxModuleTemperature_BMS 255 "SNA" ;
+VAL_ 823 BMS_minModuleTemperature_BMS 255 "SNA" ;
+VAL_ 31 BMS_linkVoltage_SC01 65535 "SNA" ;
+VAL_ 31 BMS_emergencyRequest_SC01 1 "EMERGENCY_STATE_ACTIVE" 15 "EMERGENCY_STATE_INVALID" 0 "EMERGENCY_STATE_INACTIVE" ;
+VAL_ 819 BMS_chargeVoltageLimit_BMS 65535 "SNA" ;
+VAL_ 819 BMS_chargeCurrentSetpoint_BMS 65535 "SNA" ;
+VAL_ 822 BMS_maxSOC_BMS 65535 "SNA" ;
+VAL_ 822 BMS_minSOC_BMS 65535 "SNA" ;
+VAL_ 822 BMS_isolationResistanceInt_BMS 65535 "SNA" ;
+VAL_ 822 BMS_isolationResistanceExt_BMS 65535 "SNA" ;
+VAL_ 820 BMS_maxSOH_BMS 255 "SNA" ;
+VAL_ 820 BMS_minSOH_BMS 255 "SNA" ;
+VAL_ 820 BMS_energyAvailable_BMS 65535 "SNA" ;
+VAL_ 821 BMS_maxBrickVoltageIndex_BMS 65535 "SNA" ;
+VAL_ 821 BMS_minBrickVoltageIndex_BMS 65535 "SNA" ;
+VAL_ 821 BMS_maxBrickVoltage_BMS 65535 "SNA" ;
+VAL_ 821 BMS_minBrickVoltage_BMS 65535 "SNA" ;
+VAL_ 818 BMS_dischargeCurrentLimit_BMS 65535 "SNA" ;
+VAL_ 818 BMS_regenCurrentLimit_BMS 65535 "SNA" ;
+VAL_ 818 BMS_minVoltageLimit_BMS 65535 "SNA" ;
+VAL_ 818 BMS_maxVoltageLimit_BMS 65535 "SNA" ;
+VAL_ 282 BMS_stateTRIndex_BMS 16 "BMS 16 (serial)" 31 "SNA" 14 "BMS 14 (serial)" 13 "BMS 13 (serial)" 12 "BMS 12 (serial)" 11 "BMS 11 (serial)" 10 "BMS 10 (serial)" 9 "BMS 9 (serial)" 8 "BMS 8" 7 "BMS 7" 6 "BMS 6" 5 "BMS 5" 4 "BMS 4" 3 "BMS 3" 15 "BMS 15 (serial)" 2 "BMS 2" 1 "BMS 1" 0 "No TR" ;
+VAL_ 282 BMS_stateTR_BMS 15 "STATE_INVALID" 2 "STATE_TRD_ERROR" 1 "STATE_TRD_WARNING" 0 "STATE_TRD_OK" ;
+VAL_ 282 BMS_cntrStateAux4_BMS 2 "CTR_OPENING" 3 "CTR_INVALID" 1 "CTR_ON" 0 "CTR_OFF" ;
+VAL_ 282 BMS_cntrStateAux3_BMS 2 "CTR_OPENING" 3 "CTR_INVALID" 1 "CTR_ON" 0 "CTR_OFF" ;
+VAL_ 282 BMS_cntrStateAux2_BMS 2 "CTR_OPENING" 3 "CTR_INVALID" 1 "CTR_ON" 0 "CTR_OFF" ;
+VAL_ 282 BMS_cntrStateAux1_BMS 2 "CTR_OPENING" 3 "CTR_INVALID" 1 "CTR_ON" 0 "CTR_OFF" ;
+VAL_ 282 BMS_hvilState_BMS 15 "SNA" 1 "HVIL ERROR" 0 "HVIL OK" ;
+VAL_ 282 BMS_isolationError_BMS 3 "SNA" 2 "ISOLATION ERROR" 1 "ISOLATION WARNING" 0 "ISOLATION OK" ;
+VAL_ 282 BMS_isolationState_BMS 2 "ISOLATION_INVALID" 1 "ISOLATION_ACTIVE" 0 "ISOLATION_INACTIVE" ;
+VAL_ 282 BMS_chargeState_BMS 3 "CHARGESTATE_INVALID" 1 "CHARGESTATE_COMPLETE" 0 "CHARGESTATE_NOTCOMPLETE" ;
+VAL_ 282 BMS_state_BMS 15 "STATE_INVALID" 6 "STATE_ESS_FAULT" 5 "STATE_STRING_FAULT" 4 "STATE_LIMPHOME" 3 "STATE_ACCESSORY" 2 "STATE_CHARGE" 1 "STATE_DRIVE" 0 "STATE_STANDBY" ;
+VAL_ 282 BMS_numberOfConnectedStrings_BMS 15 "SNA" ;
+VAL_ 817 BMS_regenCurrentResidual_BMS 65535 "SNA" ;
+VAL_ 817 BMS_dischargeCurrentResidual_BMS 65535 "SNA" ;
+VAL_ 817 BMS_current_BMS 65535 "SNA" ;
+VAL_ 817 BMS_linkVoltage_BMS 65535 "SNA" ;
+VAL_ 283 BMS_cntrRequestAux4_PT 1 "CNTR_ON" 0 "CNTR_OFF" ;
+VAL_ 283 BMS_cntrRequestAux3_PT 1 "CNTR_ON" 0 "CNTR_OFF" ;
+VAL_ 283 BMS_cntrRequestAux2_PT 1 "CNTR_ON" 0 "CNTR_OFF" ;
+VAL_ 283 BMS_cntrRequestAux1_PT 1 "CNTR_ON" 0 "CNTR_OFF" ;
+VAL_ 283 BMS_rangeRequest_PT 15 "RANGE_INVALID" 14 "RANGE_MAXIMUM" 13 "RANGE_MODESOH8" 12 "RANGE_MODESOH7" 11 "RANGE_MODESOH6" 10 "RANGE_MODESOH5" 9 "RANGE_MODESOH4" 8 "RANGE_MODESOH3" 7 "RANGE_MODESOH2" 6 "RANGE_MODESOH1" 5 "RANGE_MODE407" 4 "RANGE_MODE405" 3 "RANGE_MODE4175" 2 "RANGE_MODE415" 1 "RANGE_LIMITED" 0 "RANGE_SHIPPING" ;
+VAL_ 283 BMS_chargePowerAvailable_PT 65535 "SNA" ;
+VAL_ 283 BMS_sleepRequest_PT 15 "SLEEP_INVALID" 1 "SLEEP_ACTIVE" 0 "SLEEP_INACTIVE" ;
+VAL_ 283 BMS_stateRequest_PT 15 "STATE_INVALID" 6 "STATE_ESS_FAULT" 5 "STATE_STRING_FAULT" 4 "STATE_LIMPHOME" 3 "STATE_ACCESSORY" 2 "STATE_CHARGE" 1 "STATE_DRIVE" 0 "STATE_STANDBY" ;
+VAL_ 283 BMS_isolationRequest_PT 15 "ISOLATION_INVALID" 1 "ISOLATION_ACTIVE" 0 "ISOLATION_INACTIVE" ;
+VAL_ 1849 NLG_TempCoolPlate 255 "SNA" ;
+VAL_ 1849 NLG_CoolingRequest 127 "SNA" ;
+VAL_ 1849 NLG_AcPhaseUsd 7 "SNA" 3 "THREE_PHASES" 2 "TWO_PHASES" 1 "ONE_PHASE" 0 "NO_PHASE" ;
+VAL_ 1849 NLG_AcPhaseDet 7 "SNA" 3 "THREE_PHASES" 2 "TWO_PHASES" 1 "ONE_PHASE" 0 "NO_PHASE" ;
+VAL_ 1849 NLG_StatusCP 7 "SNA" 3 "CTRLPILOT_VALID" 2 "CTRLPILOT_INVALID" 1 "CTRLPILOT_FREQOUT" 0 "CTRLPILOT_OVERFLOW" ;
+VAL_ 1849 NLG_StatusPP 7 "SNA" 5 "PROXD_NOT_CONNECTED" 4 "PROXD_CIRCUIT_ERRATIC" 3 "PROXD_CIRCUIT_HIGH" 2 "PROXD_CIRCUIT_LOW" 1 "PROXD_CIRCUIT_RANGE" 0 "PROXD_DETECTED" ;
+VAL_ 1849 NLG_AcCurrMaxPP 7 "SNA" 4 "63 A" 3 "32 A" 2 "20 A" 1 "13 A" 0 "0 A" ;
+VAL_ 1849 NLG_AcCurrMaxCP 1023 "SNA" ;
+VAL_ 1833 NLG_S_AcPhaseRot 1 "anticlockwise" 0 "clockwise" ;
+VAL_ 1833 NLG_AcPowTotAct 65535 "SNA" ;
+VAL_ 1833 NLG_AcCurrL3Act 255 "SNA" ;
+VAL_ 1833 NLG_AcCurrL2Act 255 "SNA" ;
+VAL_ 1833 NLG_AcCurrL1Act 255 "SNA" ;
+VAL_ 1832 NLG_AcCurrHwAvl 255 "SNA" ;
+VAL_ 1832 NLG_StateAct 5 "Shutdown" 4 "Charge" 3 "Ready2Charge" 2 "Standby" 1 "Wakeup" 0 "Sleep" ;
+VAL_ 1832 NLG_StateCtrlPilot 7 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 1832 NLG_AcCurrMaxAct 2047 "SNA" ;
+VAL_ 1832 NLG_DcHvVoltAct 8191 "SNA" ;
+VAL_ 1832 NLG_DcHvCurrAct 4095 "SNA" ;
+VAL_ 1801 NLG_DcHvAhAct 255 "SNA" ;
+VAL_ 1801 NLG_DcHvWhAct 255 "SNA" ;
+VAL_ 1801 NLG_AcWhAct 255 "SNA" ;
+VAL_ 1801 NLG_TempCon 255 "SNA" ;
+VAL_ 1801 NLG_MaxTempAct 255 "SNA" ;
+VAL_ 1809 NLG_LedDem 15 "Blue/White  LED on only" 14 "White, Constant Yellow" 13 "White, Yellow pulsating, 0.5Hz" 12 "White, Constant Green" 11 "White, Green pulsating, 0.5Hz" 10 "White, Constant Red " 9 "White, Red pulsating, 0.5Hz" 8 "Blue/White  LED on only" 7 "all LED off" 6 "Constant Yellow" 5 "Yellow pulsating, 0.5Hz" 4 "Constant Green" 3 "Green pulsating, 0.5Hz" 2 "Constant Red " 1 "Red pulsating, 0.5Hz" 0 "all LED off" ;
+VAL_ 1809 NLG_AcPhaseShift 4095 "SNA" ;
+VAL_ 1809 NLG_StateDem 7 "SNA" 6 "Sleep" 1 "Charge" 0 "Standby" ;
+VAL_ 1809 NLG_AcCurrLimMax 2047 "SNA" ;
+VAL_ 1809 NLG_DcHvCurrLimMax 2047 "SNA" ;
+VAL_ 1809 NLG_DcHvVoltLimMax 8191 "SNA" ;
+
